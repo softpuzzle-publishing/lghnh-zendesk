@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>(guide)lg 생활건강 </title>
+    @@include('@@webRoot/_include/_head.html')
+    <style>
+        body {
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        section>h1 {
+            font-size: 24px;
+            margin-bottom: 1rem;
+            color: #ff4949;
+            letter-spacing: -.5px;
+        }
+
+        section>h1::before {
+            content: '♣️ ';
+        }
+
+        section {
+            padding: 1rem;
+        }
+
+        section>div+div {
+            margin-top: .5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <section class="col-6">
+            <h1>card</h1>
+            <div class="card" style="padding:40px">
+            </div>
+        </section>
+        <section class="col-6">
+            <h1>title</h1>
+            <div>
+
+                <div >
+                    <div class="page-header">
+                        <h1>1:1문의</h1>
+                        <p class="page-header-description">더욱 빠르고 성의 있는 서비스를 위해 항상 노력하는 LG생활건강이 되겠습니다</p>
+                    </div>
+                </div>
+                <div style="margin-top: 50px;">
+                    <div class="sub-title">
+                        서브타이틀 폰트사이즈 26
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="col-6">
+            <h1>color</h1>
+            <div>
+                <div style="background-color: #ddd;">
+                    <p class="fontTypeW">고객의소리</p>
+                </div>
+                <p class="fontType1">고객의소리</p>
+                <p class="fontType2">고객의소리</p>
+                <p class="fontType3">고객의소리</p>
+                <p class="fontType4">고객의소리 프라이머리컬러</p>
+                <p class="fontType5">고객의소리</p>
+                <p class="fontType6">고객의소리</p>
+                <p class="fontType7">고객의소리</p>
+                <p class="fontType8">고객의소리</p>
+                <p class="fontType8">고객의소리</p>
+                <p class="fontType9">고객의소리</p>
+                <p class="fontType10">고객의소리</p>
+                <p class="fontType11">고객의소리 </p>
+            </div>
+        </section>
+        <section class="col-6">
+            <h1>button</h1>
+            <div>
+                <button type="button" class="btnType1"><span>btnType1</span></button>
+                <button type="button" class="btnType2">btnType2</button>
+                <button type="button" class="btnType3">btnType3</button>
+                <button type="button" class="btnType3 inputSize">btnType3.inputSize </button>
+                <button type="button" class="btnType4">btnType4</button>
+                <button type="button" class="btnType4 bigSize">btnType4.bigSize</button>
+                <button type="button" class="btnType5">btnType5</button>
+                <button type="button" class="downBtn">downBtn</button>
+                <button type="button" class="downBtn2">downBtn2</button>
+                <button type="button" class="moreBtn">moreBtn</button>
+                <button type="button" class="resultBtn">resultBtn <span></span></button>
+            </div>
+        </section>
+        <section class="col-6">
+            <h1>breadcrumb</h1>
+            <div>
+                <div class="locationArea">
+                    <ul id="location">
+                        <li class="home"><a href="/"><span class="hideDesc">HOME</span></a></li>
+                        <li><p><a href="/customer/index.jsp">고객센터</a></p>
+                            <div class=""><ul>
+                
+                                <li class=""><a href="/recruit/index.jsp">채용정보</a></li> 
+                                <li class=""><a href="/ir/index.jsp">투자정보</a></li>
+                                <li class=""><a href="/manage/index.jsp">ESG</a></li>
+                                <li class=""><a href="/right/index.jsp">정도경영</a></li>
+                                <li class="on"><a href="/customer/index.jsp">고객센터</a></li>
+                                
+                                <li class=""><a href="/search/search.jsp">통합검색</a></li>
+                                <li class=""><a href="/mypage/index.jsp">My page</a></li>
+                                <!-- <li ><a href="/mypage/review/list.jsp">My Care</a></li> -->
+                                 
+                
+                            </ul></div>
+                        </li>
+                        <li><p class="fb"><a href="/customer/faq/list.jsp">간편해결</a></p>
+                
+                            <div class=""><ul>
+                                <li class=""><a href="/customer/cstmProcedure.jsp">고객응대절차</a></li>
+                                <li class="on"><a href="/customer/faq/list.jsp">간편해결</a></li>
+                                <li class=""><a href="/customer/login.jsp">고객의 소리</a></li>
+                                <li class=""><a href="/customer/notice/list.jsp">공지사항</a></li>
+                                <li class=""><a href="/mypage/qna/list.jsp">My Page</a></li>
+                                <!--<li ><a href="/customer/msds.jsp" onclick="alert('업데이트 중n곧 찾아뵙겠습니다'); return false;">MSDS</a></li> -->
+                            </ul></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="col-6">
+            <h1>search[컨텐트 내부]</h1>
+            <div>
+                <div class="search-container"><input type="text" class="search-input"></div>
+            </div>
+        </section>
+        <section class="col-6">
+            <h1>search group</h1>
+            <div>
+                <div class="search-group">
+                    <select>
+                        @@for (var i = 1; i < 10; i++) {
+                        <option value="">고객응대절차 `+i+`</option>
+                        } 
+                    </select>
+                    
+                    <div class="input-group">
+                        <input type="text" class="search-input">
+                        <a href="#"><i class="icon-search"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

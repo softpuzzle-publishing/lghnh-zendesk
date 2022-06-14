@@ -1,0 +1,59 @@
+<style>
+    .sub-nav{ align-items: baseline;display: flex;fflex-wrap: wrap;gap: 15px 30px;justify-content: space-between;
+    margin: 25px 0 55px 0;}
+
+    .sub-nav .search-container {max-width: 300px;width: 100%;}
+    .sub-nav input[type="search"]::after {font-size: 15px;}
+    .search-container{position: relative;}
+
+</style>
+<div class="sub-nav">
+    <div class="locationArea">
+        <ul id="location">
+            <li class="home"><a href="/"><span class="hideDesc">HOME</span></a></li>
+            <li>
+                <p></p>
+                <div>
+                    <ul>
+
+                        <li class=""><a href="/recruit/index.jsp">채용정보</a></li>
+                        <li class=""><a href="/ir/index.jsp">투자정보</a></li>
+                        <li class=""><a href="/manage/index.jsp">ESG</a></li>
+                        <li class=""><a href="/right/index.jsp">정도경영</a></li>
+                        <li class="on"><a href="/customer/index.jsp">고객센터</a></li>
+                        <li class=""><a href="/search/search.jsp">통합검색</a></li>
+                        <li class=""><a href="/mypage/index.jsp">My page</a></li>
+                        <!-- <li ><a href="/mypage/review/list.jsp">My Care</a></li> -->
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <p></p>
+                <div>
+                    <ul>
+                        <li class=""><a href="/customer/cstmProcedure.jsp">고객응대절차</a></li>
+                        <li class="on"><a href="/customer/faq/list.jsp">간편해결</a></li>
+                        <li class=""><a href="/customer/login.jsp">고객의 소리</a></li>
+                        <li class=""><a href="/customer/notice/list.jsp">공지사항</a></li>
+                        <li class=""><a href="/mypage/qna/list.jsp">My Page</a></li>
+                        <!--<li ><a href="/customer/msds.jsp" onclick="alert('업데이트 중n곧 찾아뵙겠습니다'); return false;">MSDS</a></li> -->
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="search-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
+            <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor" />
+            <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5" />
+        </svg>
+        <form role="search" class="search search-has-value" data-search="" action="/hc/ko/search" accept-charset="UTF-8" method="get">
+            <input name="utf8" type="hidden" value="✓"><input type="search" name="query" id="query" placeholder="검색" aria-label="검색">
+            <button type="button" aria-controls="query" class="clear-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" role="img" viewBox="0 0 12 12" aria-label="검색 지우기">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M3 9l6-6m0 6L3 3"></path>
+                </svg>
+            </button>
+        </form>
+    </div>
+</div>

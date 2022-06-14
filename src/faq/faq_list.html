@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- 헤더 -->
+        @@include('@@webRoot/_include/_header.html')
+
+        <!-- 컨텐트 -->
+        <div id="container">
+            <!-- <section class="main-visual"></section> -->
+            <main id="content" role="main">
+                <div class="container">
+                    @@include('@@webRoot/_include/_searchArea.html')
+                    <div class="contents-area">
+                        @@include('@@webRoot/_include/_aside.html')
+                        <div class="contArea">
+                            <div class="page-header">
+                                <h1>간편해결</h1>
+                            </div>
+                            <div class="faq-product">
+                                <div class="sub-title">제품군을 선택해주세요.</div>
+                                <div class="swiper-container">
+                                    <ul class="faq-product-list swiper-wrapper">
+                                        <li class="swiper-slide">
+                                            <a href="">
+                                                <div class="icon-wrap">
+                                                    <i class="icon-product-cosmetic"></i>
+                                                    <b>화장품</b>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <p>메이크업</p>
+                                                    <p>남성용/향수</p>
+                                                    <p>클렌징/필링</p>
+                                                    <p>멤버쉽</p>
+                                                    <p>팩/마스크</p>
+                                                    <p>기초</p>
+                                                    <p>선케어</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <a href="">
+                                                <div class="icon-wrap">
+                                                    <i class="icon-product-teeth"></i>
+                                                    <b>구강용품</b>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <p>치약</p>
+                                                    <p>칫솔</p>
+                                                    <p>양치액</p>
+                                                    <p>치아미백제</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <a href="">
+                                                <div class="icon-wrap">
+                                                    <i class="icon-product-hair"></i>
+                                                    <b>헤어케어</b>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <p>샴푸/린스</p>
+                                                    <p>에어졸</p>
+                                                    <p>염모제</p>
+                                                    <p>헤어트리트먼트</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <a href="">
+                                                <div class="icon-wrap">
+                                                    <i class="icon-product-skin"></i>
+                                                    <b>스킨케어</b>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <p>바디로션</p>
+                                                    <p>바디워시</p>
+                                                    <p>화장비누</p>
+                                                    <p>훼이셜폼</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <a href="">
+                                                <div class="icon-wrap">
+                                                    <i class="icon-product-baby"></i>
+                                                    <b>베이비</b>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <p>물티슈</p>
+                                                    <p>기저귀</p>
+                                                    <p>유아식품</p>
+                                                    <p>유아화장품</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <a href="">
+                                                <div class="icon-wrap">
+                                                    <i class="icon-product-laundry"></i>
+                                                    <b>세탁용품</b>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <p>세탁세제</p>
+                                                    <p>섬유유연제</p>
+                                                    <p>표백제</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <a href="">
+                                                <div class="icon-wrap">
+                                                    <i class="icon-product-living"></i>
+                                                    <b>주거용품</b>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <p>랩</p>
+                                                    <p>방향/탈취제</p>
+                                                    <p>주거세제</p>
+                                                    <p>주방세제</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <a href="">
+                                                <div class="icon-wrap">
+                                                    <i class="icon-product-food"></i>
+                                                    <b>식음료</b>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <p>기능성음료</p>
+                                                    <p>생수</p>
+                                                    <p>주스</p>
+                                                    <p>커피&티</p>
+                                                    <p>탄산음료</p>
+                                                    <p>혼합음료</p>
+                                                    <p>건강기능식품</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <a href="">
+                                                <div class="icon-wrap">
+                                                    <i class="icon-product-etc"></i>
+                                                    <b>기타</b>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <p>마스크</p>
+                                                    <p>면도용품</p>
+                                                    <p>펫케어</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="faq-sort">
+                                <div class="sub-title">질문유형을 선택해주세요.</div>
+                                <div class="swiper-container">
+                                    <div class="sort-btn-area swiper-wrapper">
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-01" class="btn-check" autocomplete="off">
+                                            <label for="product-01">전체</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-02" class="btn-check" autocomplete="off">
+                                            <label for="product-02">회원정보</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-03" class="btn-check" autocomplete="off">
+                                            <label for="product-03">포인트</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-04" class="btn-check" autocomplete="off">
+                                            <label for="product-04">제품</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-05" class="btn-check" autocomplete="off">
+                                            <label for="product-05">가격</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-06" class="btn-check" autocomplete="off">
+                                            <label for="product-06">구입</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-07" class="btn-check" autocomplete="off">
+                                            <label for="product-07">교환/반품</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-08" class="btn-check" autocomplete="off">
+                                            <label for="product-08">성분/원료</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-09" class="btn-check" autocomplete="off">
+                                            <label for="product-09">유통(사용)기한</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-10" class="btn-check" autocomplete="off">
+                                            <label for="product-10">표시사항</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-11" class="btn-check" autocomplete="off">
+                                            <label for="product-11">효능/효과</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-12" class="btn-check" autocomplete="off">
+                                            <label for="product-12">디자인</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-13" class="btn-check" autocomplete="off">
+                                            <label for="product-13">사용방법</label>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                var ww = $(window).width();
+                                var productSwiper = undefined;
+                                var productSortSwiper = undefined;
+
+                                function initSwiper() {
+                                    // 제품군 선택
+                                    if (ww < 768 && productSwiper == undefined) {
+                                        productSwiper = new Swiper(".faq-product .swiper-container", {
+                                            slidesPerView: 3,
+                                            spaceBetween: 0,
+                                            simulateTouch: true,
+                                            // watchOverflow: true,
+                                            pagination: {
+                                                el: '.swiper-pagination',
+                                                type: 'bullets',
+                                                clickable : true,
+                                            },
+                                            // loop: true,
+                                            // autoplay: {
+                                            //     delay: 500,
+                                            //     disableOnInteraction: false,
+                                            // },
+                                        });
+                                    } else if (ww >= 768 && productSwiper != undefined) {
+                                        productSwiper.destroy();
+                                        productSwiper = undefined;
+                                    }
+
+
+                                }
+
+                                function sortSwiper() {
+                                    // 질문유형 선택
+                                    if (ww < 768 && productSortSwiper == undefined) {
+                                        productSortSwiper = new Swiper(".faq-sort .swiper-container", {
+                                            slidesPerView: "auto",
+                                            spaceBetween: 0,
+                                            // simulateTouch: true,
+                                            watchOverflow: true,
+                                        });
+                                    } else if (ww >= 768 && productSortSwiper != undefined) {
+                                        productSortSwiper.destroy();
+                                        productSortSwiper = undefined;
+                                    }
+                                }
+
+                                initSwiper();
+                                sortSwiper();
+
+                                $(window).on('resize', function () {
+                                    ww = $(window).width();
+                                    initSwiper();
+                                    sortSwiper();
+                                });
+                            </script>
+                            <div class="faq-video">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="sub-title">셀프해결</div>
+                                    <a href="">
+                                        <i class="icon-more"></i>
+                                    </a>
+                                </div>
+                                <ul class="faq-video-list">
+                                    <li>
+                                        <a href="">
+                                            <div class="play-thumb">
+                                                <img src="../assets/images/@landscape.jpg" alt="동영상 썸네일">
+                                            </div>
+                                            <img src="" alt="">
+                                            <div class="title">[치약]</div>
+                                            <div class="desc">치약 Eyemark 색상에 따라 성분이 다른가요?</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="play-thumb">
+                                                <img src="../assets/images/@landscape.jpg" alt="동영상 썸네일">
+                                            </div>
+                                            <img src="" alt="">
+                                            <div class="title">[염모제]</div>
+                                            <div class="desc">흑모비책 오리엔탈 새치크림염색 사용방법</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="play-thumb">
+                                                <img src="../assets/images/@landscape.jpg" alt="동영상 썸네일">
+                                            </div>
+                                            <img src="" alt="">
+                                            <div class="title">[치약]</div>
+                                            <div class="desc">치약 짤 때 공기가 나와요</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="play-thumb">
+                                                <img src="../assets/images/@landscape.jpg" alt="동영상 썸네일">
+                                            </div>
+                                            <img src="" alt="">
+                                            <div class="title">[염모제]</div>
+                                            <div class="desc">염색약 오염 제거</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="faq-list">
+                                <ul class="tabMenu">
+                                    <li><a href="#none">자주묻는 질문</a></li>
+                                    <li><a href="#none">셀프해결</a></li>
+                                </ul>
+                                <div class="listCont faqList" id="faqList">
+                                    <div class="top clearfix">
+                                        <span class="fl">
+                                            <b>전체 288건</b>
+                                            <span>자주하는 질문을 간단히 알기 쉽게 설명해드립니다.</span>
+                                        </span>
+                                        <span class="fr">
+                                            <a href="javascript:;" onclick="javascript:changeSort('DATE');"><b>최신 수정순</b></a>
+                                            <a href="javascript:;" onclick="javascript:changeSort('HIT');"><b>조회수 순</b></a>
+                                        </span>
+                                    </div>
+                                    <div class="list bn">
+                                        <ul>
+                                            <li class="clearfix">
+                                                <div class="fl">
+                                                    <b>[화장품-메이크업]</b>
+                                                    <span><a href="faq_detail.html"> 브랜드별 색조화장품의 색상호수를 달리 표기하는 이유는 무엇인가요?</a></span>
+                                                </div>
+                                                <div class="fr">
+                                                    <span class="date">2021/04/26</span>
+                                                    <span class="count">1219</span>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl">
+                                                    <b>[화장품-기초]</b>
+                                                    <span><a href="faq_detail.html"> 20대 초반의 젊은 피부에게도 링클 제품이 필요하나요?</a></span>
+                                                </div>
+                                                <div class="fr">
+                                                    <span class="date">2021/04/26</span>
+                                                    <span class="count">1148</span>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl">
+                                                    <b>[식음료-탄산음료]</b>
+                                                    <span><a href="faq_detail.html">코카-콜라는 무엇으로 만들어지나요?</a></span>
+                                                </div>
+                                                <div class="fr">
+                                                    <span class="date">2021/04/26</span>
+                                                    <span class="count">1059</span>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl">
+                                                    <b>[식음료-기능성음료]</b>
+                                                    <span><a href="faq_detail.html">글라소 비타민워터 제품 내 침전물은 무엇인가요?</a></span>
+                                                </div>
+                                                <div class="fr">
+                                                    <span class="date">2021/04/26</span>
+                                                    <span class="count">1046</span>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl">
+                                                    <b>[화장품-메이크업]</b>
+                                                    <span><a href="faq_detail.html"> 투웨이케익과 팩트, 페이스파우더의 차이점은 무엇인가요? 투웨이케익 사용후 팩트나 페이스파우더를 덧발라도 되나요?</a></span>
+                                                </div>
+                                                <div class="fr">
+                                                    <span class="date">2021/04/26</span>
+                                                    <span class="count">997</span>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl">
+                                                    <b>[주거용품-랩]</b>
+                                                    <span><a href="faq_detail.html"> 랩 성분중에 환경호르몬이 들어있다는데 사실인가요?</a></span>
+                                                </div>
+                                                <div class="fr">
+                                                    <span class="date">2021/04/26</span>
+                                                    <span class="count">978</span>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl">
+                                                    <b>[주거용품-방향/탈취제]</b>
+                                                    <span><a href="faq_detail.html"> 섬유탈취제의 사용기한이 얼마나 되나요?</a></span>
+                                                </div>
+                                                <div class="fr">
+                                                    <span class="date">2021/04/26</span>
+                                                    <span class="count">951</span>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl">
+                                                    <b>[식음료-기능성음료]</b>
+                                                    <span><a href="faq_detail.html">영진구론산 제품들에는 타우린 함량이 얼마나 포함이 되어 있나요? </a></span>
+                                                </div>
+                                                <div class="fr">
+                                                    <span class="date">2021/04/26</span>
+                                                    <span class="count">945</span>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl">
+                                                    <b>[화장품-메이크업]</b>
+                                                    <span><a href="faq_detail.html"> 화장품 원료로 사용되는 탈크가 무엇인가요?</a></span>
+                                                </div>
+                                                <div class="fr">
+                                                    <span class="date">2021/04/26</span>
+                                                    <span class="count">944</span>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl">
+                                                    <b>[주거용품-방향/탈취제]</b>
+                                                    <span><a href="faq_detail.html"> 파르텔 크리스탈겔 제품을 자동차에 부착하여 사용해도 되나요?</a></span>
+                                                </div>
+                                                <div class="fr">
+                                                    <span class="date">2021/04/26</span>
+                                                    <span class="count">942</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="listCont selfList" id="selfList">
+                                    <div class="top clearfix">
+                                        <span class="fl">
+                                            <b>전체 33건</b>
+                                            <span>사용방법 등을 동영상이나 이미지정보를 통해 쉽게 설명해드립니다.</span>
+                                        </span>
+                                        <span class="fr">
+                                            <a href="javascript:;" onclick="javascript:changeSort('DATE');"><b>최신 수정순</b></a>
+                                            <a href="javascript:;" onclick="javascript:changeSort('HIT');"><b>조회수 순</b></a>
+                                        </span>
+                                    </div>
+                                    <div class="list bn">
+                                        <ul>
+                                            <li>
+                                                셀프해결 목록이 없습니다.
+                                            </li>
+                                            <li class="clearfix">
+                                                <span class="thum">
+                                                    <a href="javascript:goView(249, 'self')">
+                                                        <img src="http://www.careshop.co.kr/ecm_upload/simple//simpleImg1_20211101122755.jpg" alt="">
+                                                    </a>
+                                                </span>
+                                                <div>
+                                                    <span><a href="javascript:goView(249, 'self')">치약 Eyemark 색상에 따라 성분이 다른가요?</a></span>
+                                                    <div>
+                                                        <span class="date">2021/11/01</span>
+                                                        <span class="count">137</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <span class="thum">
+                                                    <a href="javascript:goView(258, 'self')">
+                                                        <img src="http://www.careshop.co.kr/ecm_upload/simple//simpleImg0_20211101135747.jpg" alt="">
+                                                    </a>
+                                                </span>
+                                                <div>
+                                                    <span><a href="javascript:goView(258, 'self')">흑모비책 오리엔탈 새치크림염색 사용방법</a></span>
+                                                    <div>
+                                                        <span class="date">2021/11/01</span>
+                                                        <span class="count">124</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <span class="thum">
+                                                    <a href="javascript:goView(252, 'self')">
+                                                        <img src="http://www.careshop.co.kr/ecm_upload/simple//simpleImg0_20211101125454.jpg" alt="">
+                                                    </a>
+                                                </span>
+                                                <div>
+                                                    <span><a href="javascript:goView(252, 'self')">치약 짤 때 공기가 나와요</a></span>
+                                                    <div>
+                                                        <span class="date">2021/11/01</span>
+                                                        <span class="count">92</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <span class="thum">
+                                                    <a href="javascript:goView(256, 'self')">
+                                                        <img src="http://www.careshop.co.kr/ecm_upload/simple//simpleImg0_20211101135100.jpg" alt="">
+                                                    </a>
+                                                </span>
+                                                <div>
+                                                    <span><a href="javascript:goView(256, 'self')">염색약 오염 제거방법</a></span>
+                                                    <div>
+                                                        <span class="date">2021/11/01</span>
+                                                        <span class="count">90</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <span class="thum">
+                                                    <a href="javascript:goView(272, 'self')">
+                                                        <img src="http://www.careshop.co.kr/ecm_upload/simple//simpleImg0_20211102150252.jpg" alt="자연퐁 식기세척기 전용액체세제 사용방법">
+                                                    </a>
+                                                </span>
+                                                <div>
+                                                    <span><a href="javascript:goView(272, 'self')">자연퐁 식기세척기 전용액체세제 사용방법</a></span>
+                                                    <div>
+                                                        <span class="date">2021/11/02</span>
+                                                        <span class="count">72</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <ul>
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                @@include('@@webRoot/_include/_pagination.html')
+                            </div>
+                            <script>
+                                $(".tabMenu li").on('click', function(){
+                                    $(this).addClass("on");
+                                    var tabMenuIndex = $(this).index();
+                                    $(".tabMenu li").not(this).removeClass("on");
+                                    console.log(tabMenuIndex);
+                                    $(".faq-list .listCont").css({"display":"none"});
+                                    $(".faq-list .listCont").eq(tabMenuIndex).css({"display":"block"});
+                                });
+                                $(".tabMenu li:first-child").trigger("click");
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 퀵메뉴 -->
+                @@include('@@webRoot/_include/_quickWrap.html')
+            </main>
+        </div>
+        <!-- 컨텐트 끝 -->
+
+
+        <!-- 푸터 -->
+        @@include('@@webRoot/_include/_footer.html')
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+<body>
+    <div id="wrapper">
+        <!-- 헤더 -->
+        @@include('@@webRoot/_include/_header.html')
+        
+        <!-- 컨텐트 -->
+        <div id="container">
+            <main id="content" role="main">
+                <div class="container">
+                    @@include('@@webRoot/_include/_searchArea.html')
+                    <div class="contents-area">
+                    @@include('@@webRoot/_include/_aside.html')
+
+                        <div class="contArea">
+                            <div class="page-header">
+                                <h1>고객응대절차</h1>
+                            </div>
+                            <div class="response-step-wrap">
+                                <div class="response-step-list">
+                                    <div>
+                                        <div class="num">01</div>
+                                        <div class="title">VOC 접수</div>
+                                        <div class="desc">전화/ 홈페이지<br>
+                                            E-mai/ 채팅/ 방문</div>
+                                    </div>
+                                    <i class="icon-step-01"></i>
+                                </div>
+                                <div class="response-step-list">
+                                    <div>
+                                        <div class="num">02</div>
+                                        <div class="title">현상파악</div>
+                                        <div class="desc">방문 또는 전화<br>
+                                            지역별 CS 전문가</div>
+                                    </div>
+                                    <i class="icon-step-02"></i>
+                                </div>
+                                <div class="response-step-list">
+                                    <div>
+                                        <div class="num">03</div>
+                                        <div class="title">원인분석/대책수립</div>
+                                        <div class="desc">원인분석, 대책수립<br>
+                                            (품질관리조직)</div>
+                                    </div>
+                                    <i class="icon-step-03"></i>
+                                </div>
+                                <div class="response-step-list">
+                                    <div>
+                                        <div class="num">04</div>
+                                        <div class="title">고객회신</div>
+                                        <div class="desc">분석결과 회신<br>교환/보상</div>
+                                            <div class="sub-desc">*소비자분쟁 해결기준에
+                                                의한 보상</div>
+                                    </div>
+                                    <i class="icon-step-04"></i>
+                                </div>
+                            </div>
+                            <div class="response-complaints">
+                                <div class="page-header">
+                                    <h1>고객불만 처리기준</h1>
+                                    <p class="page-header-description">제품에 이상이 있을 경우 공정거래위원회 고시 소비자분쟁해결 기준에 따라 교환 또는 보상을 해드립니다.</p>
+                                </div>
+                                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                    <colgroup><col width=""><col width=""><col width=""></colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">품종/해당 품목</th>
+                                        <th scope="col">피해유형</th>
+                                        <th scope="col">처리기준</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td rowspan="3" class="borderC">
+                                            <b>의약품/의약외품</b>
+                                            <div>치약, 치아미백제, 구강청결제,<br>
+                                                손소독제,  마스크, 가정용살충제<br>
+                                                자양강장변질제(액상), 생리대 등</div>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>이물혼입</li>
+                                                <li>함량, 크기부적합</li>
+                                                <li>변질, 부패</li>
+                                                <li>유효기간 경과</li>
+                                                <li>용량부족</li>
+                                                <li>품질, 성능, 기능 불량</li>
+                                            </ul>
+                                        </td>
+                                        <td>제품 교환 또는 구입가 환급</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>용기 불량으로 인한 피해사고</li>
+                                                <li>부작용</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            치료비, 경비 및 일실소득<sup>2)</sup>배상
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borderC">
+                                            <ul>
+                                                <li>수량부족</li>
+                                            </ul>
+                                        </td>
+                                        <td class="borderC">부족수량 지급</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2" class="borderC">
+                                            <b>화장품</b>
+                                            <div>색조, 기초,  팩, 향수, 샴푸, 바디,<br>
+                                                염모제, 헤어케어, 물티슈 등</div>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>이물혼입</li>
+                                                <li>함량, 크기부적합</li>
+                                                <li>변질, 부패</li>
+                                                <li>유효기간 경과</li>
+                                                <li>용량부족</li>
+                                                <li>품질, 성능, 기능 불량</li>
+                                            </ul>
+                                        </td>
+                                        <td>제품 교환 또는 구입가 환급</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borderC">
+                                            <ul>
+                                                <li>용기 불량으로 인한 피해사고</li>
+                                                <li>부작용</li>
+                                            </ul>
+                                        </td>
+                                        <td class="borderC">
+                                            치료비<sup>1)</sup>, 경비 및 일실소득<sup>2)</sup>배상
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borderC">
+                                            <b>비누 및 합성세제</b>
+                                            <div>화장비누, 액체비누, 소독비누,<br>
+                                                분말세제 등</div>
+                                        </td>
+                                        <td class="borderC">
+                                            <ul>
+                                                <li>성분 함량 부족</li>
+                                                <li>실량 미달</li>
+                                            </ul>
+                                        </td>
+                                        <td class="borderC">제품 교환</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borderC">
+                                            <b>플라스틱 제품</b>
+                                            <div>랩</div>
+                                        </td>
+                                        <td class="borderC">
+                                            <ul>
+                                                <li>품질불량</li>
+                                            </ul>
+                                        </td>
+                                        <td class="borderC">제품 교환 또는 구입가 환급</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2" class="borderC">
+                                            <b>식료품</b>
+                                            <div>탄산음료, 주스, 두유, 유산균음료,<br>
+                                                먹는샘물, 분유, 이유식, 건과자,<br>
+                                                비스킷, 알사탕, 햄, 소시지 등</div>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>함량/용량 부족</li>
+                                                <li>변질/부패</li>
+                                                <li>유효기간 경과</li>
+                                                <li>이물혼입</li>
+                                            </ul>
+                                        </td>
+                                        <td>제품 교환 또는 구입가 환급</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borderC">
+                                            <ul>
+                                                <li>용기 불량으로 인한 피해사고</li>
+                                                <li>부작용</li>
+                                            </ul>
+                                        </td>
+                                        <td class="borderC">
+                                            치료비, 경비 및 일실소득<sup>2)</sup>배상
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3" class="borderC">
+                                            <b>생활위생용품</b>
+                                            <div>일회용기저귀, 칫솔, 주방세제 등</div>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>이물혼입</li>
+                                                <li>품질, 성능, 기능 불량</li>
+                                            </ul>
+                                        </td>
+                                        <td>제품 교환 또는 구입가 환급</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>용기 불량으로 인한 피해사고</li>
+                                                <li>부작용</li>
+                                            </ul>
+                                        </td>
+                                        <td>치료비, 경비 및 일실소득<sup>2)</sup>배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borderC">
+                                            <ul>
+                                                <li>수량부족</li>
+                                            </ul>
+                                        </td>
+                                        <td class="borderC">부족수량 지급</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3" class="borderC">
+                                            <b>사료</b>
+                                            <div>반려 동물사료, 가축사료 등</div>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>중량 부족</li>
+                                                <li>변질/부패</li>
+                                                <li>성분 이상</li>
+                                                <li>유효기간 경과</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            제품 교환 또는 구입가 환불
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>부작용</li>
+                                            </ul>
+                                        </td>
+                                        <td>사료의 구입가 및 동물의 치료 경비<sup>3)</sup>배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borderC">
+                                            <ul>
+                                                <li>동물 폐사</li>
+                                            </ul>
+                                        </td>
+                                        <td class="borderC">사료 구입가 및 동물의 가격 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="7" class="borderC">
+                                            <b>가전</b>
+                                            <div>미용기기, 자동분사기, 전동칫솔 등</div>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>구입 후 10일 이내에 정상적인 사용상태에서<br>
+                                                    발생한 성능/기능상의 하자로 중요한 수리를<br>
+                                                    요하는 경우</li>
+                                            </ul>
+                                        </td>
+                                        <td>제품 교환 또는 구입가 환급</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>구입 후 1개월 이내에 정상적인 사용상태에서<br>
+                                                    발생한 성능/기능상의 하자로 중요한 수리를<br>
+                                                    요하는 경우</li>
+                                            </ul>
+                                        </td>
+                                        <td>제품 교환 또는 무상수리</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>품질보증기간 이내에 정상적인 사용상태<br>
+                                                    에서 발생한 성능/기능상의 하자</li>
+                                            </ul>
+                                            <ul class="dashCont">
+                                                <li>하자 발생한 경우</li>
+                                                <li>수리 불가능한 경우</li>
+                                                <li>교환 불가능한 경우</li>
+                                                <li>교환된 제품이 1개월 이내에 중요한 수리를<br>요할 경우</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul class="dashCont">
+                                                <li> 무상수리</li>
+                                                <li>제품 교환 또는 구입가 환급</li>
+                                                <li>구입가 환급</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>소비자가 수리 의뢰한 제품을 사업자가<br>
+                                                    분실한 경우</li>
+                                            </ul>
+                                            <ul class="dashCont">
+                                                <li>품질보증기간 이내</li>
+                                                <li>품질보증기간 경과 후</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul class="dashCont">
+                                                <li>제품 교환 또는 구입가 환급</li>
+                                                <li>정액 감가상각4)한 금액에 10%를<br>가산하여 환급(최고한도 : 구입가격) </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>부품보유기간 이내에 수리용 부품을<br>
+                                                    보유하고 있지 않아 발생한 피해</li>
+                                            </ul>
+                                            <ul class="dashCont">
+                                                <li>품질보증기간 이내
+                                                    <div>· 정상적인 사용 상태에서 성능</div>
+                                                    <div>· 기능상의 하자로 인해 발생된 경우</div>
+                                                </li>
+                                                <li>소비자의 고의/과실로 인한 고장인 경우</li>
+                                                <li>품질보증기간 경과 후</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul class="dashCont">
+                                                <li>제품 교환 또는 구입가 환급</li>
+                                                <li>유상수리에 해당하는 금액 징수 후<br>제품 교환 </li>
+                                                <li>정액 감가상각한 잔여 금액 <sup>5)</sup>에<br>구입가의 10%를 가산하여 환급 </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>제품구입 시 운송과정에서 발생된 피해</li>
+                                            </ul>
+                                        </td>
+                                        <td>제품 교환</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="borderC">
+                                            <ul>
+                                                <li>사업자가 제품설치 중 발생된 피해</li>
+                                            </ul>
+                                        </td>
+                                        <td class="borderC">제품 교환</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <a href="/customer/cstmProcedure.jsp#standard" class="btnType4">확인하기 &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 퀵메뉴 -->
+                @@include('@@webRoot/_include/_quickWrap.html')
+            </main>
+        </div>
+        <!-- 컨텐트 끝 -->
+        
+
+        <!-- 푸터 -->
+        @@include('@@webRoot/_include/_footer.html')
+    </div>
+</body>
+</html>

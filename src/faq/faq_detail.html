@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- 헤더 -->
+        <!-- @@include('@@webRoot/_include/_header.html') -->
+
+        <!-- 컨텐트 -->
+        <div id="container">
+            <!-- <section class="main-visual"></section> -->
+            <main id="content" role="main">
+                <div class="container">
+                    @@include('@@webRoot/_include/_searchArea.html')
+                    <div class="contents-area">
+                        @@include('@@webRoot/_include/_aside.html')
+                        <div class="contArea">
+                            <div class="page-header">
+                                <h1>간편해결</h1>
+                            </div>
+                            <div class="faq-list">
+                                <ul class="tabMenu">
+                                    <li class="on"><a href="#none">자주묻는 질문</a></li>
+                                    <li><a href="faq_list.html">셀프해결</a></li>
+                                </ul>
+                                <div class="faq-detail">
+                                    <div class="title">[화장품-메이크업] 브랜드별 색조화장품의 색상호수를 달리 표기하는 이유는 무엇인가요?</div>
+                                    <div class="desc">
+                                        <p>기본적인 색상 계열은 홋수별로 유사하지만, 브랜드 특성에 따라 혹은 브랜드 중심 소비자층에 따라 색상톤 및 색감에 차이를 두어</p>
+                                        <p>운영하고 있습니다.</p>
+                                        <p>제품을 선택하실 때에는 매장에 비치된 대면용 제품으로 테스트 후 본인 피부톤에 맞는 제품을 선택하시는 것을 추천 드립니다.</p>
+                                    </div>
+
+                                    <div class="faq-quistion-wrap">
+                                        <span>또 다른 질문이 있으십니까?</span>
+                                        <a href="../customer/qna.html">문의 등록</a>
+                                    </div>
+                                </div>
+
+                                <div class="faq-solution">
+                                    <p>더 궁금하신 사항이 있으신가요?<br><span>선택하신 제품의 연관질문들도 살펴보세요!</span></p>
+                                    <ul class="relatedQ">
+                                        <li>
+                                            <a href="/customer/faq/view.jsp?seq=29">
+                                                글라소 비타민워터 제품 내 침전물은 무엇인가요?
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/customer/faq/view.jsp?seq=28">
+                                                글라소 내용물의 색깔이 변했어요.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/customer/faq/view.jsp?seq=15">
+                                                파워에이드 마운틴블라스트 제품 내용물 색깔이 하얗게 변했어요.
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="evaluation">
+                                        <li>
+                                            <label for="face01"><img src="../assets/images/customer/ico_face01.png" alt="매우만족"></label>
+                                            <span>매우만족</span>
+                                            <input type="radio" id="face01" name="score" value="5">
+                                        </li>
+                                        <li>
+                                            <label for="face02"><img src="../assets/images/customer/ico_face02.png" alt="만족"></label>
+                                            <span>만족</span>
+                                            <input type="radio" id="face02" name="score" value="4">
+                                        </li>
+                                        <li>
+                                            <label for="face03"><img src="../assets/images/customer/ico_face03.png" alt="보통"></label>
+                                            <span>보통</span>
+                                            <input type="radio" id="face03" name="score" value="3">
+                                        </li>
+                                        <li>
+                                            <label for="face04"><img src="../assets/images/customer/ico_face04.png" alt="불만"></label>
+                                            <span>불만</span>
+                                            <input type="radio" id="face04" name="score" value="2">
+                                        </li>
+                                        <li>
+                                            <label for="face05"><img src="../assets/images/customer/ico_face05.png" alt="매우 불만"></label>
+                                            <span>매우불만</span>
+                                            <input type="radio" id="face05" name="score" value="1">
+                                        </li>
+                                    </ul><!-- //evaluation-->
+                                    <div class="faq-evaluation-btn-wrap">
+                                        <a href="javascript:;" class="btn btn-primary" onclick="registReview()">평가하기</a>
+                                        <p>평가해 주신 의견은 보다나은 컨텐츠 제공을 위한 개선자료로 활용됩니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn btn-secondary">목록</button>
+                            </div>
+                            <ul class="faq-question-wrap">
+                                <li ><a href="javascript:goQNA();"><img src="../assets/images/customer/btn_onetoone.jpg" alt="일대일문의"></a></li>
+                                <li><a href="javascript:;"><img style="cursor:pointer" src="../assets/images/customer/btn_kakaotalk2.jpg" alt="카카오톡 상담" onclick="javascript:window.open('https://lc1.lunasoft.co.kr/lunachat/api-connect/@lghnhcs/main', 'lunachat', 'width=1024, height=800');"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 퀵메뉴 -->
+                @@include('@@webRoot/_include/_quickWrap.html')
+            </main>
+        </div>
+        <!-- 컨텐트 끝 -->
+
+
+        <!-- 푸터 -->
+        <!-- @@include('@@webRoot/_include/_footer.html') -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- 헤더 -->
+        @@include('@@webRoot/_include/_header.html')
+
+        <!-- 컨텐트 -->
+        <div id="container">
+            <!-- <section class="main-visual"></section> -->
+            <main id="content" role="main">
+                <div class="container">
+                    @@include('@@webRoot/_include/_searchArea.html')
+                    <div class="contents-area">
+                        @@include('@@webRoot/_include/_aside.html')
+                        <div class="contArea">
+                            <div class="page-header">
+                                <h1>MY Q&A</h1>
+                                <p class="page-header-description">더욱 빠르고 성의 있는 서비스를 위해 항상 노력하는 LG생활건강이 되겠습니다</p>
+                            </div>
+                            <div class="faq-sort">
+                                <div class="swiper-container">
+                                    <div class="sort-btn-area swiper-wrapper">
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-01" class="btn-check" autocomplete="off">
+                                            <label for="product-01">전체</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-02" class="btn-check" autocomplete="off">
+                                            <label for="product-02">미용상담</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-03" class="btn-check" autocomplete="off">
+                                            <label for="product-03">홈페이지</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-04" class="btn-check" autocomplete="off">
+                                            <label for="product-04">화장품</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-05" class="btn-check" autocomplete="off">
+                                            <label for="product-05">생활용품</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-06" class="btn-check" autocomplete="off">
+                                            <label for="product-06">음료</label>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <input type="radio" name="product-sort" id="product-07" class="btn-check" autocomplete="off">
+                                            <label for="product-07">IR</label>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                var ww = $(window).width();
+                                var productSortSwiper = undefined;
+
+                                function sortSwiper() {
+                                    // 질문유형 선택
+                                    if (ww < 768 && productSortSwiper == undefined) {
+                                        productSortSwiper = new Swiper(".faq-sort .swiper-container", {
+                                            slidesPerView: "auto",
+                                            spaceBetween: 0,
+                                            // simulateTouch: true,
+                                            watchOverflow: true,
+                                        });
+                                    } else if (ww >= 768 && productSortSwiper != undefined) {
+                                        productSortSwiper.destroy();
+                                        productSortSwiper = undefined;
+                                    }
+                                }
+
+                                sortSwiper();
+
+                                $(window).on('resize', function () {
+                                    ww = $(window).width();
+                                    sortSwiper();
+                                });
+                            </script>
+
+                            <div class="my-qna-list-wrap">
+                                <div class="desc">
+                                    <b>전체<span class="fontType4"> 3</span>건</b>&ensp;
+                                    고객상담 전에 <b>고객센터 > 자주묻는 질문</b> 에서 원하시는 정보를 먼저 확인해 보세요.
+                                </div>
+
+                                <table class="custom-table">
+                                    <colgroup>
+                                        <col style="width: 8%;">
+                                        <col style="width: 12%;">
+                                        <col style="width: 50%;">
+                                        <col style="width: 15%;">
+                                        <col style="width: 15%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>NO</th>
+                                            <th>구분</th>
+                                            <th>제목</th>
+                                            <th>작성일</th>
+                                            <th>답변여부</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>미용상담</td>
+                                            <td class="text-left"><a href="qna_detail.html">젊은 피부에게도 링클 제품이 필요하나요?젊은 피부에게도 링클 제품이 필요하나요?</a></td>
+                                            <td>2021/04/26</td>
+                                            <td>처리완료</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>미용상담</td>
+                                            <td class="text-left"><a href="qna_detail.html">코카-콜라는 무엇으로 만들어지나요?</a></td>
+                                            <td>2021/04/26</td>
+                                            <td>처리중</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>미용상담</td>
+                                            <td class="text-left"><a href="qna_detail.html">젊은 피부에게도 링클 제품이 필요하나요?</a></td>
+                                            <td>2021/04/26</td>
+                                            <td>처리완료</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="d-flex justify-content-end"><button type="button" class="btn btn-primary">Q&A 등록</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 퀵메뉴 -->
+                @@include('@@webRoot/_include/_quickWrap.html')
+            </main>
+        </div>
+        <!-- 컨텐트 끝 -->
+
+
+        <!-- 푸터 -->
+        @@include('@@webRoot/_include/_footer.html')
+    </div>
+</body>
+
+</html>
