@@ -227,7 +227,7 @@
                                     <li><a href="/brand/detail.jsp?gbn=2&bid1=H126">효자삼홍</a></li>
                                 </ul>
                             </li>
-            
+
                             <li class="nextLine">
                                 <strong><a href="/brand/detail.jsp?gbn=2&bid1=H092">세트</a></strong>
                                 <ul>
@@ -489,7 +489,7 @@
 
 
 <script>
-    
+
 	//Location
 	function subMenu(){
 		var menuTitle = "";
@@ -503,7 +503,7 @@
 			$('#location li div').removeClass("on");
 			$(this).parents('li').find('div').addClass("on");
 			$("#header").css("z-index","1");
-		}); 
+		});
 
 		$("#location li div ul li a")
 		.bind("mouseenter focusin", function(){
@@ -517,12 +517,12 @@
 
 		$("#location li").mouseleave(function(){
 			$(this).find("div").removeClass("on")
-		});	
-		
+		});
+
 		$(".locationArea").focusout(function(){
 			$(this).find("div").removeClass("on")
 		});
-		
+
 	}
 	subMenu();
 
@@ -537,15 +537,15 @@
             showSubNav(showObj);
         }
     })
-    
+
     function goQNA(){
         location.href='/customer/login.jsp'
     }
-    
+
     function goCNE(){
         location.href='/customer/myCne/login.jsp'
      }
-    
+
     function goCALL() {
         location.href='/customer/myCall/login.jsp'
     }
