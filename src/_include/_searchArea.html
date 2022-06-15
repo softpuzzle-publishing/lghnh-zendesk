@@ -57,3 +57,81 @@
         </form>
     </div>
 </div>
+
+<script>
+
+    //Location
+    function subMenu() {
+        var menuTitle = "";
+        $('#location li div ul li.on').each(function (i) {
+            menuTitle = $(this).html();
+            $(this).parent().parent().siblings("p").prepend(menuTitle);
+        });
+        $('#location li p:last').addClass('fb');
+        $('#location li p a')
+            .bind("mouseenter focusin", function () {
+                $('#location li div').removeClass("on");
+                $(this).parents('li').find('div').addClass("on");
+                $("#header").css("z-index", "1");
+            });
+
+        $("#location li div ul li a")
+            .bind("mouseenter focusin", function () {
+                $('#location li div').removeClass("on");
+                $(this).parents('div').addClass("on");
+                $(this).parent().addClass('over');
+            })
+            .bind("mouseleave focusout", function () {
+                $(this).parent().removeClass('over');
+            });
+
+        $("#location li").mouseleave(function () {
+            $(this).find("div").removeClass("on")
+        });
+
+        $(".locationArea").focusout(function () {
+            $(this).find("div").removeClass("on")
+        });
+
+    }
+    //subMenu();
+
+</script>
+
+<script>
+    $(function () {
+        $('.locationArea').prependTo('#contArea');
+
+        var showObj = $('#cusSidebar > ul >li.on').find(' > a');
+        if ($(showObj).next("ul").find("li:visible").size() > 0) {
+            showSubNav(showObj);
+        }
+    })
+
+    function goQNA() {
+        location.href = '/customer/login.jsp'
+    }
+
+    function goCNE() {
+        location.href = '/customer/myCne/login.jsp'
+    }
+
+    function goCALL() {
+        location.href = '/customer/myCall/login.jsp'
+    }
+
+    function showSubNav(obj) {
+        var num = $(obj).next("ul").find("li:visible").size();
+        if (!$(obj).hasClass('on')) {
+            $(obj).addClass('on');
+            $(obj).next("ul").stop().animate({
+                height: num * 76
+            });
+        } else {
+            $(obj).removeClass('on');
+            $(obj).next("ul").stop().animate({
+                height: 0
+            });
+        }
+    }
+</script>

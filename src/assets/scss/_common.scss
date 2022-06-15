@@ -3,6 +3,9 @@
     padding: 0 10px;
     margin:auto;
     box-sizing: border-box;
+    @media screen and (max-width:767px) {
+        max-width: none;
+    }
 }
 
 
@@ -77,67 +80,67 @@
                 color: #2d2d2d;
                 display: block;
             }
-    
+
             >a {
                 padding: 18px 0;
                 display: block;
                 text-align: center;
                 background: #fff;
-    
+
                 * {
                     font-size: 14px;
                     line-height: 20px;
                     letter-spacing: -0.14px;
                 }
             }
-    
+
             &.active {
                 a {
                     background: #bd1549;
-    
+
                     b {
                         color: #fff;
-    
+
                         &+b {
                             margin-top: 10px;
                         }
                     }
-    
+
                     p {
                         color: #d7d7d7;
                         margin-top: 4px;
                     }
                 }
             }
-    
+
             &+li {
                 margin-top: -1px;
             }
         }
-    
+
         .service-information {
             padding: 18px 15px;
-    
+
             .service {
                 &__title {
                     font-size: 14px;
                     letter-spacing: -0.14px;
                 }
-    
+
                 &__number {
                     margin-top: 4px;
                     font-size: 17px;
                     letter-spacing: -0.17px;
                 }
-    
+
                 &__hour {
                     margin-top: 10px;
                     padding-bottom: 2px;
                     font-size: 14px;
-    
+
                     letter-spacing: -0.14px;
                 }
-    
+
                 &__hour-information {
                     margin-top: 4px;
                     display: flex;
@@ -149,13 +152,13 @@
                 }
             }
         }
-    
+
         .quick-btn-wrap {
             margin-top: 21px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-    
+
             >* {
                 background: #fff;
                 border-radius: 20px;
@@ -164,7 +167,7 @@
                 align-items: center;
                 justify-content: center;
             }
-    
+
             .quickBtn {
                 &__home {
                     color:#2d2d2d;
@@ -177,7 +180,7 @@
                         margin-right: 8px;
                     }
                 }
-    
+
                 &__top {
                     display: flex;
                     align-items: center;

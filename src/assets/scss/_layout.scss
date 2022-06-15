@@ -3,6 +3,7 @@ html, body	{
      margin:0;padding:0; width:100%; height:100%; min-width: 1200px;
      @media screen and (max-width:767px) {
         min-width: auto;
+        *{box-sizing: border-box;}
     }
 }
 form, input, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd { margin:0;padding:0; }
@@ -106,7 +107,8 @@ legend, caption	 { width:0 !important; height:0 !important; padding:0 !important
     margin:0 auto;  background: #666666; height: 70px;
     .logo { float:left; width:180px; height:49px; padding:21px 0 0 0; }
     @media screen and (max-width:767px) {
-        .logo{float: none;}
+        height: 55px;
+        .logo{float: none;padding: 12px 0 0 0;text-align: center;width: auto;height: auto;}
     }
 }
 
@@ -126,11 +128,21 @@ legend, caption	 { width:0 !important; height:0 !important; padding:0 !important
     li.on>a span.eng {height:0px; width:0px; overflow:hidden;}
     li.on>a span.kor {height:auto; width:auto;}
     @media screen and (max-width:767px) {
-        float: none;width: 263px;height: 100%;position: fixed;left: 0;top:0;z-index: 9999;background: #8b8b8b;
+        float: none;width: 70vw;height: 100%;position: fixed;left: 0;top:0;z-index: 9999;background: #8b8b8b;display: none;
+        &::before{content: '전체메뉴';display: block;padding: 1rem;font-size: 22px;font-weight: 700;background: #4b4b4b;color: #fff;text-align: center;}
         > li{
-            float: none;margin-right: 0 !important;
-            > a{width: auto;padding: 8px 0 11px;height: auto;line-height: normal;
-                span{width: auto;}
+            float: none;margin-right: 0 !important;border-bottom: 1px solid #666;
+            > a{
+                width: auto;padding: 10px 1rem 13px;height: auto;line-height: normal;font-size: 16px;
+                span{width: auto;height: auto;line-height: 1.5;text-align: left;}
+            }
+        }
+        > li.has-treeview{
+            > a{
+                &::before{content: '';display: block;background: url('../images/icon-gnb-arrow.png');width: 25px;height: 25px;background-size: contain;position: absolute;right: 1rem;top: 50%;transform: translateY(-50%);}
+            }
+            &.active{
+                .subMenuArea{display: block !important;}
             }
         }
     }
@@ -156,23 +168,47 @@ legend, caption	 { width:0 !important; height:0 !important; padding:0 !important
         div.section img.new {position:absolute; top:0px; left:5px;}
         div.section {position:absolute;left:0px; top:0px; display:none;}
     }
+    @media screen and (max-width:767px) {
+        position: static;border-bottom: 0;
+        > div.body{width: auto;display: block;min-height: auto;padding: 0 !important;}
+        .titArea{display: none;}
+        .contArea{float: none;width: auto;}
+    }
 }
 
 .subTypeA {
     ul {float:left; width:227px; border-left:1px solid #dcdcdc;}
     ul li {padding:5px 0 5px 20px; line-height:16px; font-family:LG Smart;}
     ul li:first {padding:0px 0 5px 20px;}
+    @media screen and (max-width:767px) {
+        ul{
+            float: none;width: auto;border-left: 0;
+            li{
+                padding: .75rem 1rem;border-bottom: 1px solid #ddd;font-size: 14px;
+                float: left;width: 50%;
+            }
+        }
+    }
 }
 
 .subTypeB {
-    ul.menuList {*zoom:1;}
-    ul.menuList:after {content:""; display:block; clear:both;}
-    ul.menuList>li {float:left; width:113px; border-left:1px solid #dcdcdc;}
-    ul.menuList .nextLine {margin-left: 246px;}
-    ul.menuList>li strong {padding-left:10px; font-size:16px; color:#333333; line-height:20px; font-weight:normal;}
-    ul.menuList>li strong a { color:#333333;}
-    ul.menuList>li ul {padding-top:10px;}
-    ul.menuList>li ul li {padding:4px 0 4px 10px; font-size:13px; line-height:16px;}
+    ul.menuList {
+        *zoom:1;
+        &::after {content:""; display:block; clear:both;}
+        .nextLine {margin-left: 246px;}
+        >li {float:left; width:113px; border-left:1px solid #dcdcdc;}
+        >li strong {padding-left:10px; font-size:16px; color:#333333; line-height:20px; font-weight:normal;}
+        >li strong a { color:#333333;}
+        >li ul {padding-top:10px;}
+        >li ul li {padding:4px 0 4px 10px; font-size:13px; line-height:16px;}
+    }
+    @media screen and (max-width:767px) {
+        ul.menuList{
+            > li{float: none;width: auto !important;height: auto !important;line-height: 1.5 !important;position: static !important;
+                strong{padding: 0;line-height: 1.5;display: block;}
+            }
+        }
+    }
 }
 
 .gnb3{
@@ -441,8 +477,25 @@ legend, caption	 { width:0 !important; height:0 !important; padding:0 !important
         span > span{display: inline-block; width: 6%;}
     }
     @media screen and (max-width:767px) {
+        padding: 1.5rem 1rem;
+        .logo{float: none;padding: 0;margin-bottom: 1.25rem;
+            img{width: 100px;}
+        }
+        .goTop{top: 0;}
+        .wa{display: none;}
+        .nav{display: none;}
         .footCont{
-            width: auto;
+            width: auto;height: auto;display: flex;flex-direction: column;
+        }
+        .content{order: 2;float: none;width: auto;
+            p{line-height: 1.4;}
+        }
+        .customercenter{
+            order: 1;display: flex;padding: 0;justify-content: space-between;
+            &::before{display: none;}
+            strong{font-size: 18px;}
+            span > span{width: 80px;}
+            > div + div{padding-left: 2rem;}
         }
     }
 }
@@ -461,6 +514,9 @@ legend, caption	 { width:0 !important; height:0 !important; padding:0 !important
             background: #333;
             .footTabSection {display:none; width:100%; padding:40px 0 60px; *zoom:1; max-width: 1160px; margin:auto;}
         }
+    }
+    @media screen and (max-width:767px) {
+        display: none;
     }
 }
 
@@ -482,6 +538,13 @@ legend, caption	 { width:0 !important; height:0 !important; padding:0 !important
         >ul>li ul {padding-top:5px;}
         >ul>li ul li {font-size:13px; line-height:22px;}
         >ul>li.last	{ left:191px !important; top:394px !important; }
+    }
+    @media screen and (max-width:767px) {
+        .footListTypeB{
+            > ul{
+                > li{position: static !important;}
+            }
+        }
     }
 }
 
