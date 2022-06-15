@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- 헤더 -->
+        @@include('@@webRoot/_include/_header.html')
+
+        <!-- 컨텐트 -->
+        <div id="container">
+            <!-- <section class="section hero"></section> -->
+            <main id="content" role="main">
+                <div class="container">
+                    @@include('@@webRoot/_include/_searchArea.html')
+                    <div class="contents-area">
+                        <!-- @@include('@@webRoot/_include/_aside.html') -->
+                        <div class="contArea">
+                            <ul class="myCareList">
+                                <li class="part1">					
+                                    <h3>My 리뷰</h3>
+                                    <div>
+                                        <i class="icon-post-review"></i>
+                                        <p class="text">제품을 사용하면서 느꼈던 여러분의 소중한 경험을 공유해주세요</p>
+                                    </div>
+                                    <p class="btn"><a href="/mypage/review/list.jsp" class="btnType1"><span>자세히 보기</span></a></p>
+                                </li>
+                                <li class="part2">
+                                    <h3>MY Q&amp;A</h3>
+                                    <div>
+                                        <i class="icon-post-qna"></i>
+                                        <p class="text">더욱 빠르고 성의 있는 서비스를 위해 항상 노력하는 LG생활건강이 되겠습니다</p>
+                                    </div>
+                                    <p class="btn"><a href="../mypage/qna_list.html" class="btnType1"><span>자세히 보기</span></a></p>
+                                </li>
+                                <li class="part3">
+                                    <h3>개인정보수정</h3>
+                                    <div>
+                                        <i class="icon-post-mypage"></i>
+                                        <p class="text">LG생활건강은 회원님의 개인정보를 신중하게 취급합니다</p>
+                                    </div>
+                                    <p class="btn"><a href="javascript:goMyInfoInclude();" class="btnType1" title="새창으로 보기"><span>자세히 보기</span></a></p>
+                                </li>				
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 퀵메뉴 -->
+                @@include('@@webRoot/_include/_quickWrap.html')
+            </main>
+        </div>
+        <!-- 컨텐트 끝 -->
+
+
+        <!-- 푸터 -->
+        @@include('@@webRoot/_include/_footer.html')
+    </div>
+</body>
+
+</html>
