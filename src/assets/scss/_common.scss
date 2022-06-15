@@ -340,6 +340,7 @@ main{
         box-sizing: border-box;
         margin:4px;
         display: inline-block;
+        cursor: pointer;
     }
     &:checked{
         & + label{
@@ -391,11 +392,13 @@ a.btn, button.btn, input.btn{
     border: 0;
     height: 44px;
     width: auto;
-    line-height: 43px;
+    line-height: 38px;
     cursor: pointer;
     font-weight: 500;
     display: inline-block;
     text-align: center;
+    padding:0.25rem 0.75rem;
+    box-sizing: border-box;
     &.btn-secondary{
         background: #5b5b5b;
         color: #fff!important;
@@ -406,6 +409,12 @@ a.btn, button.btn, input.btn{
     }
     & + .btn{
         margin-left: 7px;
+    }
+    @media screen and(max-width:767px) {
+        height: 36px;
+        width: auto;
+        line-height: 30px;
+        padding:0.25rem 0.5rem;
     }
 }
 
