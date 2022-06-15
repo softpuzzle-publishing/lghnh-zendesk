@@ -185,9 +185,9 @@ strong, em, .fb	{ font-style:normal; font-weight:normal; }
 .hbtnType	{ height:48px !important; padding:0 50px !important; line-height:48px !important; }
 /* È¸»ö¶óÀÎ¹öÆ° */
 .btnType1	{ display:inline-block; height:21px; padding:0 15px; font-size:11px; color:#454545 !important; line-height:21px; border:1px solid #dcdcdc; background:#f9f9f9; text-align:center; }
-.btnType1 span	{ display:block; padding:0 20px 0 4px; background:url('/images/common/ico_arrow4.gif') no-repeat 100% 50%; }
+.btnType1 span	{ display:block; padding:0 20px 0 4px; background:url('../images/common/ico_arrow4.gif') no-repeat 100% 50%; }
 .btnType1:hover, .btnType1:focus, .btnType1:active	{ color:#fff !important; background:#c70752; }
-.btnType1:hover span, .btnType1:focus span, .btnType1:active span	{ background-image:url('/images/common/ico_arrow4_on.gif'); }
+.btnType1:hover span, .btnType1:focus span, .btnType1:active span	{ background-image:url('../images/common/ico_arrow4_on.gif'); }
 /* ÀÚÁÖ¶óÀÎ¹öÆ° */
 .btnType2	{ display:inline-block; height:21px; padding:0 10px; font-size:13px; color:#c70752 !important; line-height:21px; border:1px solid #ca165c; background:#fff !important; text-align:center; }
 .btnType2:hover	{ color:#c70752; }

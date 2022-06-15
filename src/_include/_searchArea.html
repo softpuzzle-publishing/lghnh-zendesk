@@ -1,21 +1,204 @@
 <style>
-    .sub-nav{ align-items: baseline;display: flex;fflex-wrap: wrap;gap: 15px 30px;justify-content: space-between;
-    margin: 25px 0 55px 0;}
+    /***** sub-nav *****/
 
-    .sub-nav .search-container {max-width: 300px;width: 100%;}
-    .sub-nav input[type="search"]::after {font-size: 15px;}
-    .search-container{position: relative;}
+    .sub-nav .breadcrumbs {
+    margin: 0;
+    }
 
+    .sub-nav .search-container {
+    max-width: 300px;
+    width: 100%;
+    }
+
+    @media (min-width: 768px) {
+    .sub-nav .search-container {
+    flex: 0 1 300px;
+    }
+    }
+
+    .sub-nav input[type="search"]::after {
+    font-size: 15px;
+    }
+    /***** Breadcrumbs *****/
+    .breadcrumbs {
+    margin: 0 0 15px 0;
+    padding: 0;
+    }
+
+    @media (min-width: 768px) {
+        .breadcrumbs {
+            margin: 0;
+        }
+    }
+
+    .breadcrumbs li {
+    color: #333;
+    display: inline;
+    font-size: 13px;
+    max-width: 450px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+
+    .breadcrumbs li a:visited {
+    color: rgba(0, 0, 0, 1);
+    }
+
+    /***** Search field *****/
+    .search-container {
+    position: relative;
+    }
+
+    .search {
+    border-color: #ddd;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    position: relative;
+    transition: border 0.12s ease-in-out;
+    }
+
+    .search:focus-within {
+    border-color: rgba(206, 40, 91, 1);
+    }
+
+    .search input[type="search"],
+    .search .clear-button {
+    background-color: #fff;
+    border-radius: 30px;
+    border: none;
+    }
+
+    .search-full input[type="search"],
+    .search-full .clear-button {
+    border-color: #fff;
+    }
+
+    .search input[type="search"] {
+    appearance: none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    color: #666;
+    flex: 1 1 auto;
+    height: 40px;
+    width: 100%;
+    }
+
+    .search input[type="search"]:focus {
+    color: #555;
+    }
+
+    .search input[type="search"]::-webkit-search-decoration, .search input[type="search"]::-webkit-search-cancel-button, .search input[type="search"]::-webkit-search-results-button, .search input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    }
+
+    .search input[type="search"]:-webkit-autofill, .search input[type="search"]:-webkit-autofill:hover, .search input[type="search"]:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset;
+    }
+
+    .search .clear-button {
+    align-items: center;
+    box-sizing: border-box;
+    color: #777;
+    cursor: pointer;
+    display: none;
+    flex: none;
+    justify-content: center;
+    padding: 0 15px;
+    }
+
+    .search .clear-button:hover {
+    background-color: rgba(206, 40, 91, 1);
+    color: #fff;
+    }
+
+    .search .clear-button:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(206, 40, 91, 1);
+    }
+
+    .search-has-value .clear-button {
+    display: flex;
+    }
+
+    [dir="ltr"] .search input[type="search"] {
+    padding-left: 40px;
+    padding-right: 20px;
+    }
+
+    [dir="ltr"] .search-has-value input[type="search"] {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right-color: transparent;
+    }
+
+    [dir="ltr"] .search-has-value input[type="search"]:focus {
+    border-right-color: rgba(206, 40, 91, 1);
+    }
+
+    [dir="ltr"] .search .clear-button {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left-color: transparent;
+    }
+
+    [dir="ltr"] .search .clear-button:focus {
+    border-left-color: rgba(206, 40, 91, 1);
+    }
+
+    [dir="rtl"] .search input[type="search"] {
+    padding-left: 20px;
+    padding-right: 40px;
+    }
+
+    [dir="rtl"] .search-has-value input[type="search"] {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left-color: transparent;
+    }
+
+    [dir="rtl"] .search-has-value input[type="search"]:focus {
+    border-left-color: rgba(206, 40, 91, 1);
+    }
+
+    [dir="rtl"] .search .clear-button {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right-color: transparent;
+    }
+
+    [dir="rtl"] .search .clear-button:focus {
+    border-right-color: rgba(206, 40, 91, 1);
+    }
+
+    .search-icon {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 15px;
+    z-index: 1;
+    width: 18px;
+    height: 18px;
+    color: #777;
+    pointer-events: none;
+    }
+
+    [dir="rtl"] .search-icon {
+    left: auto;
+    right: 15px;
+    }
 </style>
 <div class="sub-nav">
-    <div class="locationArea">
+    <!-- 기존 엘지 코드 -->
+    <div class="locationArea" style="display: none;">
         <ul id="location">
             <li class="home"><a href="/"><span class="hideDesc">HOME</span></a></li>
             <li>
                 <p></p>
                 <div>
                     <ul>
-
                         <li class=""><a href="/recruit/index.jsp">채용정보</a></li>
                         <li class=""><a href="/ir/index.jsp">투자정보</a></li>
                         <li class=""><a href="/manage/index.jsp">ESG</a></li>
@@ -42,6 +225,17 @@
             </li>
         </ul>
     </div>
+    <!-- 기존 엘지 코드 끝-->
+
+    <!-- 젠데스크 코드 -->
+    <ol class="breadcrumbs">
+        <li><i class="icon-breadcrumb-home"></i></li>
+        <li>고객센터</li>
+        <li>고객대응절차</li>
+    </ol>
+    <!-- 젠데스크 코드 끝-->
+
+    <!-- 서치 고정 -->
     <div class="search-container">
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
             <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor" />
@@ -56,6 +250,7 @@
             </button>
         </form>
     </div>
+    <!--서치 고정 끝 -->
 </div>
 
 <script>

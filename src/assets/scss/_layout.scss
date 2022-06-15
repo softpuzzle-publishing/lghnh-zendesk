@@ -323,7 +323,7 @@ legend, caption	 { width:0 !important; height:0 !important; padding:0 !important
         &.home a:first-child	{ display:block; width:15px; height:15px; }
         p {
             display:inline-block; height:20px; font-size:13px; line-height:15px; color:#a9a9a9;
-             a	{
+            a	{
                 display: inline-block;
                 padding-right: 25px;
                 background: url(../images/icon-breadcrumb-dropdown.svg) no-repeat 100% 0;
@@ -356,6 +356,9 @@ legend, caption	 { width:0 !important; height:0 !important; padding:0 !important
 #container	{
     *zoom:1; flex-grow: 1; height:auto; width: 100%; margin-top: 102px;
     &::after	{ content:""; display:block; clear:both; }
+    @media screen and (max-width: 767px){
+        margin-top: 55px;
+    }
 }
 #contArea {
     float:left; width:900px;
@@ -641,7 +644,7 @@ legend, caption	 { width:0 !important; height:0 !important; padding:0 !important
                     }
                 }
             }
-            .dropdown-menu{
+            .accordion-item{
                 display: none;
                 li{
                     a{

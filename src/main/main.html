@@ -11,19 +11,39 @@
         <!-- 컨텐트 -->
         <div id="container" class="main">
             <main id="content" role="main" class="main-container">
-                <section class="main-visual"></section>
+                <section class="section hero">
+                    <div class="container">@@include('@@webRoot/_include/_searchArea.html')</div>
+                    <div class="hero-inner">
+                        <div class="head-text">
+                            <p>고객님 곁에 항상 LG생활건강이 있습니다.</p>
+                            <h1>고객센터</h1>
+                        </div>
+                        <div class="search-group">
+                            <select>
+                                @@for (var i = 1; i < 10; i++) {
+                                <option value="">베이비 `+i+`</option>
+                                <option value="">고객센터 `+i+`</option>
+                                } 
+                            </select>
+                            <div class="input-group">
+                                <input type="text" class="search-input" placeholder="무엇을 도와드릴까요?">
+                                <a href="#"><i class="icon-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <div class="container">
                     <div class="main-content">
                         <section class="main-link-wrap">
-                            <a href="" class="main-link card">
+                            <a href="../customer_response/customer_response.html" class="main-link card">
                                 <b>고객응대절차</b>
                                 <i class="icon-main-step"></i>
                             </a>
-                            <a href="" class="main-link card">
+                            <a href="../faq/faq_list.html" class="main-link card">
                                 <b>간편해결</b>
                                 <i class="icon-main-solution"></i>
                             </a>
-                            <a href="" class="main-link card">
+                            <a href="../notice/notice_list.html" class="main-link card">
                                 <b>공지사항</b>
                                 <i class="icon-main-notice"></i>
                             </a>

@@ -55,6 +55,12 @@
 .icon-play{width: 39px;height: 39px; background-image:url('../images/icon-play.svg');}
 .icon-file{width: 13px; height: 15px; background-image: url('../images/icon-file.svg');}
 .icon-answer{width: 14px; height: 14px; background-image: url('../images/icon-answer.svg');}
+.icon-breadcrumb-home{width: 16px; height: 16px; background-image: url('../images/icon-breadcrumb-home.svg');vertical-align: top;}
+
+
+.icon-post-review{width: 70px; height: 70px; background-image: url('../images/common/ico_myCare1.png');}
+.icon-post-qna{width: 70px; height: 70px; background-image: url('../images/common/ico_myCare2.png');}
+.icon-post-mypage{width: 70px; height: 70px; background-image: url('../images/common/ico_myCare3.png');}
 
 
 .card{
@@ -65,7 +71,7 @@
 .quickWrap{
     position: fixed;
     height: 417px;
-    top:221px;
+    top:212px;
     z-index: 1;
     width: 150px;
     right: 50%;
@@ -212,22 +218,6 @@ main{
         }
     }
 }
-.search-container{
-    // .search-input{
-    //     width: 300px;
-    //     border-radius: 30px;
-    //     height: 40px;
-    //     padding-left:50px;
-    //     border:1px solid #e8e8e8;
-    //     position: relative;
-    //     background: #fff url(../images/icon-search.svg) no-repeat left 1.25rem top 50%;
-    //     background-size: 15px auto;
-    //     box-sizing: border-box;
-    //     @media screen and (max-width:767px) {
-    //         display: none;
-    //     }
-    // }
-}
 
 .contents-area{
     display: flex;
@@ -239,9 +229,12 @@ main{
     border-radius: 30px;
     display: flex;
     width: 490px;
+    justify-content: center;
+    padding:0 10px;
+    margin: auto;
     select{
-        background: #fff url(../images/icon-search-dropdown.svg) no-repeat 0.85rem center;
-        padding: 0.25rem 1.75rem 0.25rem 3rem;
+        background: #fff url(../images/icon-search-dropdown.svg) no-repeat 92% center;
+        padding: 0.25rem 1.75rem 0.25rem 2.2rem;
         height: 50px;
         appearance: none;
         flex: 0 0 160px;
@@ -279,7 +272,20 @@ main{
         box-sizing: border-box;
         padding:0.25rem 50px 0.25rem 1.25rem;
     }
+    @media screen and (max-width:767px){
+        width: 100%;
+        select{
+            flex: 0 0 30%;
+            width: auto;
+            padding: 0.25rem 1.75rem;
+        }
+        .input-group{
+            flex: 0 0 60%;
+            width: 100%;
+        }
+    }
 }
+
 
 
 .page-header{
@@ -349,13 +355,6 @@ main{
         }
     }
 }
-
-
-
-.sub-nav {
-    @media (min-width: 767px) {margin: 25px 0;}
-}
-
 
 
 

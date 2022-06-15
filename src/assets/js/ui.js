@@ -289,8 +289,8 @@ $('.tabs a').click(function(e){
 
 
 // aside 
-$(".dropdown").on("click", function () { 
-    $(this).siblings(".dropdown-menu").slideToggle();
+$(".accordion-header").on("click", function () { 
+    $(this).siblings(".accordion-item").slideToggle();
 });
 /**추가 끝 */
 

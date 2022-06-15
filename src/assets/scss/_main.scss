@@ -1,6 +1,6 @@
 .main{
     #content{
-        section:not(.main-visual){
+        section:not(.section.hero){
             margin-top: 60px;
             @media screen and (max-width:767px) {
                 margin-top: 30px;
@@ -8,13 +8,29 @@
         }
     }
 }
-.main-visual{
-    height:376px;
-    background: url('../images/img-main-visual.png') no-repeat center;
-    background-size: cover;
-    @media screen and (max-width:767px) {
-        width: 100%;
-      
+
+.head-text{
+    p{
+        font-size: 16px;
+        font-weight: bold;
+        color: #2d2d2d;
+        margin-bottom: 14px;
+    }
+    h1{
+        font-size: 42px;
+        font-weight: bold;
+        color: #2d2d2d;
+        margin-bottom: 42px;
+    } 
+    @media screen and (max-width:767px){
+        p{
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        h1{
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
     }
 }
 
