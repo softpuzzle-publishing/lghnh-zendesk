@@ -30,9 +30,6 @@
 .icon-client-contact{width: 60px; height:50px; background-image: url('../images/icon-client-contact.svg');}
 
 
-.icon-search{width: 20px; height: 20px; background-image: url('../images/icon-search.svg');}
-
-
 .icon-step-01{width: 42px; height: 48px; background-image: url('../images/icon-step-01.svg');}
 .icon-step-02{width: 42px; height: 50px; background-image: url('../images/icon-step-02.svg');}
 .icon-step-03{width: 50px; height: 50px; background-image: url('../images/icon-step-03.svg');}
@@ -50,10 +47,11 @@
 .icon-product-etc{width: 125px; height: 84px;background-image: url('../images/icon-product-etc.svg');}
 
 
+.icon-search{width: 20px; height: 20px; background-image: url('../images/icon-search.svg');}
 .icon-more{width: 26px; height: 26px; background-image: url('../images/icon-more.svg');}
-
-
 .icon-play{width: 39px;height: 39px; background-image:url('../images/icon-play.svg');}
+.icon-file{width: 13px; height: 15px; background-image: url('../images/icon-file.svg');}
+.icon-answer{width: 14px; height: 14px; background-image: url('../images/icon-answer.svg');}
 
 
 .card{
@@ -207,7 +205,7 @@ main{
         border: 1px solid #e8e8e8;
         box-sizing: border-box;
         @media screen and (max-width:767px) {
-            padding:20px;
+            padding:30px 20px;
         }
     }
 }
@@ -295,6 +293,20 @@ main{
         margin-top: 14px;
         font-weight: bold;
     }
+    &.notice{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @media screen and (max-width:767px){
+        &.notice{
+            flex-direction: column;
+            align-items: baseline;
+            span{
+                margin-top: 10px;
+            }
+        }
+    }
 }
 
 .sub-title{
@@ -370,7 +382,7 @@ main{
 }
 
 
-a.btn, button.btn{
+a.btn, button.btn, input.btn{
     min-width: 120px;
     margin: 0;
     border: 0;
