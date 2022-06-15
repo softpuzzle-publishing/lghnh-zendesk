@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- 헤더 -->
+        <!-- @@include('@@webRoot/_include/_header.html') -->
+
+        <!-- 컨텐트 -->
+        <div id="container">
+            <!-- <section class="main-visual"></section> -->
+            <main id="content" role="main">
+                <div class="container">
+                    @@include('@@webRoot/_include/_searchArea.html')
+                    <div class="contents-area">
+                        @@include('@@webRoot/_include/_aside.html')
+                        <div class="contArea">
+                            <div class="page-header">
+                                <h1>1:1문의</h1>
+                                <p class="page-header-description">더욱 빠르고 성의 있는 서비스를 위해 항상 노력하는 LG생활건강이 되겠습니다</p>
+                            </div>
+                            <div class="login-wrap">
+                                <div class="inputWarp_new">
+                                    <div class="condition_new">
+                                        <span><input type="radio" name="login_check" id="idMailChk" checked="checked" value="userid"> <label for="idMailChk">아이디 or 이메일</label></span>
+                                        <span><input type="radio" name="login_check" id="phoneChk" value="mobile"> <label for="phoneChk">휴대폰 번호</label></span>
+                                    </div>
+                                    <div class="login-container">
+                                        <div class="inputBox_new">
+                                            <input type="text" class="idEmailInput" id="userid" name="userid" maxlength="100" title="아이디 or 이메일" placeholder="아이디 or 이메일">
+                                            <input type="text" class="phoneInput" id="mobile" name="mobile" maxlength="11" title="휴대폰번호('-'없이 입력해주세요)" placeholder="휴대폰번호('-'없이 입력해주세요)" style="display:none;">
+                                            <input type="password" name="passwd" maxlength="20" title="비밀번호" placeholder="비밀번호">
+                                            <div class="btn-wrap">
+                                                <a href="#" onclick="chkValue();return false;" class="btn btn-primary">로그인</a>
+                                                <a href="/customer/qna2.jsp" id="nonmember" class="btn btn-secondary">비회원</a>
+                                            </div>
+                                            <span><input type="checkbox" id="idSave_new" name="login_save_id" value="Y"><label for="idSave_new">아이디 저장</label></span>
+                                        </div>
+                                        <ul class="btnBox_new">
+                                            <li><a href="javascript:kaPopup()" class="btnTypeNB kakao" title="새창열기">카카오로 로그인</a></li>
+                                            <li><a href="javascript:nvPopup()" class="btnTypeNB naver" title="새창열기">네이버로 로그인</a></li>
+                                            <li class="mgN"><a href="javascript:fbPopup()" class="btnTypeNB facebook" title="새창열기">페이스북으로 로그인</a></li>
+                                        </ul>
+                                        <p class="cautionText">* 인증받은 이메일과 휴대폰 번호로만 로그인이 가능합니다. 회원정보수정 페이지에서 이메일, 휴대폰 인증을 받으실 수 있습니다.</p>
+                                    </div>
+                                </div>
+                                <ul class="footBtn_new">
+                                    <li class="on"><a href="javascript:goJoin();" title="새창열기">회원가입</a></li>
+                                    <li><a href="javascript:goFindID();" title="새창열기">아이디 찾기</a></li>
+                                    <li class="last"><a href="javascript:goFindPW();" title="새창열기">비밀번호 찾기</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 퀵메뉴 -->
+                @@include('@@webRoot/_include/_quickWrap.html')
+            </main>
+        </div>
+        <!-- 컨텐트 끝 -->
+
+
+        <!-- 푸터 -->
+        <!-- @@include('@@webRoot/_include/_footer.html') -->
+    </div>
+</body>
+
+</html>

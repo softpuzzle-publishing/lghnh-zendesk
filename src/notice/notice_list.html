@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- 헤더 -->
+        @@include('@@webRoot/_include/_header.html')
+
+        <!-- 컨텐트 -->
+        <div id="container">
+            <!-- <section class="main-visual"></section> -->
+            <main id="content" role="main">
+                <div class="container">
+                    @@include('@@webRoot/_include/_searchArea.html')
+                    <div class="contents-area">
+                        @@include('@@webRoot/_include/_aside.html')
+                        <div class="contArea">
+                            <div class="page-header">
+                                <h1>공지사항</h1>
+                                <p class="page-header-description">LG생활건강에서 공지 드립니다. 회사, 브랜드, 제품에 관한 생생한 소식을 확인 하세요.</p>
+                            </div>
+                            <div class="my-qna-list-wrap">
+                                <div class="desc">
+                                    <b>전체<span class="fontType4"> 60</span>건</b>
+                                </div>
+                                <table class="custom-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="num">NO</th>
+                                            <th class="subject">제목</th>
+                                            <th class="add-file">첨부파일</th>
+                                            <th class="date">작성일</th>
+                                            <th class="hits">조회수</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="5">등록된 내용이 없습니다.</td>
+                                        </tr>
+                                        @@for(var i = 60; i > 50; i--){
+                                        <tr>
+                                            <td class="num">`+i+`</td>
+                                            <td class="subject text-left"><a href="notice_detail.html">젊은 피부에게도 링클 제품이 필요하나요?젊은 피부에게도 링클 제품이 필요하나요?</a></td>
+                                            <td lass="add-file">미용상담</td>
+                                            <td class="date">2021/04/26</td>
+                                            <td class="hits">3333</td>
+                                        </tr>
+                                        }
+                                    </tbody>
+                                </table>
+
+                                @@include('@@webRoot/_include/_pagination.html')
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 퀵메뉴 -->
+                @@include('@@webRoot/_include/_quickWrap.html')
+            </main>
+        </div>
+        <!-- 컨텐트 끝 -->
+
+
+        <!-- 푸터 -->
+        @@include('@@webRoot/_include/_footer.html')
+    </div>
+</body>
+
+</html>
