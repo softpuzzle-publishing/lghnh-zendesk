@@ -38,11 +38,11 @@
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
     gap: 25px;
-    max-width: 1160px;
     .main-link{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-direction: row;
         height: 140px;
         width: 100%;
         padding:0 30px;
@@ -142,9 +142,4 @@
             margin-bottom: 30px;
         }
     }
-}
-
-
-.main-container{
-    
 }

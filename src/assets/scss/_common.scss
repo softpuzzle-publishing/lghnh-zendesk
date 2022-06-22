@@ -1,8 +1,9 @@
-.container{
+.content-container{
     max-width: 1180px;
     padding: 0 10px;
     margin:auto;
     box-sizing: border-box;
+
     @media screen and (max-width:767px) {
         max-width: none;
     }
@@ -58,9 +59,9 @@
 .icon-breadcrumb-home{width: 16px; height: 16px; background-image: url('../images/icon-breadcrumb-home.svg');vertical-align: top;}
 
 
-.icon-post-review{width: 70px; height: 70px; background-image: url('../images/common/ico_myCare1.png');}
-.icon-post-qna{width: 70px; height: 70px; background-image: url('../images/common/ico_myCare2.png');}
-.icon-post-mypage{width: 70px; height: 70px; background-image: url('../images/common/ico_myCare3.png');}
+.icon-post-review{width: 70px; height: 70px; background-image: url('../images/common/ico-myCare1.png');}
+.icon-post-qna{width: 70px; height: 70px; background-image: url('../images/common/ico-myCare2.png');}
+.icon-post-mypage{width: 70px; height: 70px; background-image: url('../images/common/ico-myCare3.png');}
 
 
 .card{
@@ -267,8 +268,8 @@ main{
         height: 50px;
         margin-left: -1px;
         border:1px solid #e8e8e8;
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px!important;
+        border-bottom-right-radius: 30px!important;
         box-sizing: border-box;
         padding:0.25rem 50px 0.25rem 1.25rem;
     }

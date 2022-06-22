@@ -1,0 +1,397 @@
+<a class="skip-navigation" tabindex="1" href="#main-content">{{t 'skip_navigation' }}</a>
+
+<header class="header" id="header">
+        <!-- 유틸 시작 -->
+        <div id="util">
+            <div class="content-container">
+                <div class="">
+                    <div class="utilCont">
+                        <ul>
+                            <li><a href="/recruit/index.jsp">채용정보</a></li>
+                            <li><a href="/ir/index.jsp">투자정보</a></li>
+                            <li><a href="/right/index.jsp">정도경영</a></li>
+                            <li><a href="/customer/index.jsp">고객센터</a></li>
+                        </ul>
+                        <ul>
+                            <li class="not-list-style"><a href="http://www.smartconsumer.go.kr" target="_blank" title="새창열림"><img src="http://contents.lgcare.com/lgcareWebSrc/images/btn/btn_happyconsumer.png" alt="스마트 컨슈머"></a></li>
+                            <li class="not-list-style"><a href="https://www.youtube.com/channel/UC60e4j7LVEFzLSSgt2DZTZg" target="_blank" title="새창열림"><img src="http://contents.lgcare.com/lgcareWebSrc/images/btn/btn-util-youtube.gif" alt="LG생활건강TV"></a></li>
+                            <li>
+                                <a href="/login/login.jsp" onclick="window.open(this.href, 'popLogin', 'width=900px,height=560px'); return false" target="_blank" title="새창열림">로그인</a>
+                            </li>
+                            <li>
+                                <a href="http://www.l-caremembers.com/kr/index.jsp" target="_blank" title="새창열림">엘케어 멤버스</a>
+                            </li>
+                            <li><a href="/global/index.jsp" target="_blank" title="새창열림">English</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- //util -->
+        <!-- 유틸 끝 -->
+
+        <!-- 지엔비 시작  -->
+        <div id="gnbArea">
+            <div class="content-container">
+                <!-- 로고 시작 -->
+                <div class="logo">
+                    {{#link 'help_center'}}
+                    <img src="{{settings.logo}}" alt="{{t 'home_page' name=help_center.name}}" />
+                    {{#if settings.show_brand_name}}
+                    <span aria-hidden="true">{{help_center.name}}</span>
+                    {{/if}}
+                    {{/link}}
+                </div><!--logo-->
+                <!-- 로고 끝 -->
+                <!-- 피씨 메뉴 시작 -->
+                <div class="nav-wrapper-desktop">
+                    <ul id="gnb">
+                        <li class="gnb1 has-treeview">
+                            <a href="/brand/list.jsp?type=BEAUTIFUL"><span class="eng">BEAUTIFUL</span><span class="kor">아름답게</span></a>
+                            <div class="subMenuArea subTypeA">
+                                <div class="body">
+                                    <div class="titArea">
+                                        <strong class="tit">BEAUTIFUL</strong>
+                                        <p class="txt">여러분의 아름다운 꿈을<br>실현해 드립니다.</p>
+                                    </div>
+                                    <ul>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C021">후</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C022">오휘</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C065">숨37°</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C067">빌리프</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C082">더 사가 오브 수</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C054">이자녹스</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C060">수려한</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C010">코드글로컬러</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C035">보닌</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C062">케어존</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C075">더마리프트</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C092">네이처컬렉션</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C074">더페이스샵</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=H078">비욘드</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C088">CNP</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C089">CNP Rx</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C070">VDL</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C090">VDIVOV</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C091">생활정원</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C093">fmgt</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C094">닥터벨머</a></li>
+                                        <li><a href="/brand/detail.jsp?gbn=1&amp;bid1=C095">예화담</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gnb2 has-treeview">
+                            <a href="/brand/list.jsp?type=HEALTHY"><span class="eng">HEALTHY</span><span class="kor">건강하게</span></a>
+                            <div class="subMenuArea subTypeB">
+                                <div class="body">
+                                    <div class="titArea">
+                                        <strong class="tit">HEALTHY</strong>
+                                        <p class="txt">여러분의 건강한 삶을<br>
+                                            지켜 드립니다.</p>
+                                    </div>
+                                    <ul class="menuList">
+                                        <li>
+                                            <strong><a href="/brand/detail.jsp?gbn=1&amp;bid1=H056">헤어케어</a></strong>
+                                            <ul>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H056">엘라스틴</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H128">오가니스트</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H095">리엔</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H144">닥터그루트</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H151">실크테라피</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong><a href="/brand/detail.jsp?gbn=2&amp;bid1=H113">스킨케어</a></strong>
+                                            <ul>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H113">벨먼</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H138">젠톨로지</a></li>
+                                                <!--<li><a href="/brand/detail.jsp?gbn=2&bid1=H112">나나스비</a></li>-->
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=1223">피지오겔</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong><a href="/brand/detail.jsp?gbn=2&amp;bid1=H021">구강용품</a></strong>
+                                            <ul>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H021">페리오</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H061">죽염치약</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H143">REACH</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong><a href="/brand/detail.jsp?gbn=2&amp;bid1=H049">세탁용품</a></strong>
+                                            <ul>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H049">샤프란</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H142">아우라</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H121">한입세제</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H085">테크</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H034">수퍼타이</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H140">FiJi</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H141">산소크린</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong><a href="/brand/detail.jsp?gbn=2&amp;bid1=H054">주거용품</a></strong>
+                                            <ul>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H054">홈스타</a></li>
+                                                <!--<li><a href="/brand/detail.jsp?gbn=2&bid1=H114">인섹트 제로</a></li>-->
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H038">SAFE</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H036">퐁퐁</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H037">자연퐁</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong><a href="/brand/detail.jsp?gbn=2&amp;bid1=H791">방향/탈취제</a></strong>
+                                            <ul>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H791">아우라</a>
+                                                </li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H792">샤프란 케어</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="resizeNextLine">
+                                            <strong><a href="/brand/detail.jsp?gbn=2&amp;bid1=H120">베이비&amp;기타</a></strong>
+                                            <ul>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H120">베비언스</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H097">토디앙</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H125">메소드</a></li>
+                                                <!--<li><a href="/brand/detail.jsp?gbn=2&bid1=H135">WHY</a></li>-->
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H790">시리우스</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong><a href="/brand/detail.jsp?gbn=2&amp;bid1=H092">세트</a></strong>
+                                            <ul>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H092">선물세트</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=2&amp;bid1=H154">미니스</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gnb3 has-treeview">
+                            <a href="/brand/list.jsp?type=REFRESHING"><span class="eng">REFRESHING</span><span class="kor">활기차게</span></a>
+                            <div class="subMenuArea subTypeB">
+                                <div class="body">
+                                    <div class="titArea">
+                                        <strong class="tit">REFRESHING</strong>
+                                        <p class="txt">여러분의 활기찬 생활을<br>만들어 드립니다.</p>
+                                    </div>
+                                    <ul class="menuList">
+                                        <li>
+                                            <strong><a href="/brand/detail.jsp?gbn=3&amp;bid1=R001">스파클링</a></strong>
+                                            <ul>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R001">코카-콜라</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R002">코카-콜라 제로</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R003">코카-콜라 라이트</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R005">환타</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R007">스프라이트</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R063">스프라이트 제로</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R022">스프라이트 킨사이다</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R012">슈웹스</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R020">밀크소다 암바사</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R023">닥터페퍼</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R024">캐나다 드라이</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R032">씨그램</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong><a href="/brand/detail.jsp?gbn=3&amp;bid1=R009">주스</a></strong>
+                                            <ul>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R009">미닛메이드</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R037">미닛메이드 스파클링</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R010">미닛메이드 쿠우</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R062">미닛메이드 유기농</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R061">미닛메이드 조이</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R064">미닛메이드 쿠우젤리</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong><a href="/brand/detail.jsp?gbn=3&amp;bid1=R013">커피&amp;티</a></strong>
+                                            <ul>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R013">조지아</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R016">태양의 마테차</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R040">태양의 식후비법 W</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong><a href="/brand/detail.jsp?gbn=3&amp;bid1=R008">스포츠&amp;에너지음료</a></strong>
+                                            <ul>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R008">파워에이드</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R036">토레타</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R065">토레타!THE 락토</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R060">몬스터 에너지</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong><a href="/brand/detail.jsp?gbn=3&amp;bid1=R025">생수</a></strong>
+                                            <ul>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R025">휘오 다이아몬드 샘물</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R028">휘오 다이아몬드 EC</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R026">휘오 제주</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R027">휘오 순수</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong><a href="/brand/detail.jsp?gbn=3&amp;bid1=R017">라이프 스타일</a></strong>
+                                            <ul>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R017">글라소 비타민워터</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="last">
+                                            <strong><a href="/brand/detail.jsp?gbn=3&amp;bid1=R029">해태htb</a></strong>
+                                            <ul>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R030">썬키스트</a></li>
+                                                <li><a href="/brand/detail.jsp?gbn=3&amp;bid1=R029">기타 브랜드</a> </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gnb4">
+                            <a href="/manage/index.jsp"><span class="eng">ESG</span><span class="kor">ESG</span></a>
+                        </li>
+                        <li class="gnb5 has-treeview">
+                            <a href="/news/index.jsp"><span class="eng">NEWS</span><span class="kor">뉴스 &amp; 미디어</span></a>
+                            <div class="subMenuArea subTypeB" style="display:none;">
+                                <div class="body">
+                                    <div class="titArea">
+                                        <strong class="tit">NEWS</strong>
+                                        <p class="txt">여러분의 활기찬 생활을<br>만들어 드립니다.</p>
+                                    </div>
+                                    <div class="contArea">
+                                        <ul class="menuList">
+                                            <li><strong><a href="/news/press/list.jsp">Press Release</a></strong></li>
+                                            <li><strong><a href="/news/cf/list.jsp">Advertisement</a></strong></li>
+                                            <!-- <li><strong><a href="/news/event.jsp">Event</a></strong></li> -->
+                                            <li><strong><a href="/news/beauty/list.jsp">생활문화 정보</a></strong></li>
+                                            <li><strong><a href="/news/social.jsp">Social News</a></strong></li>
+                                            <li><strong><a href="/news/story/list.jsp">LG생활건강 스토리</a></strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gnb6 has-treeview">
+                            <a href="/company/index.jsp"><span class="eng">COMPANY</span><span class="kor">생활문화기업</span></a>
+                            <div class="subMenuArea subTypeB">
+                                <div class="body">
+                                    <div class="titArea">
+                                        <strong class="tit">COMPANY</strong>
+                                        <p class="txt">고객의 아름다움과 꿈을 실현하는<br>
+                                            최고의 생활문화 기업을 추구 합니다.</p>
+                                    </div>
+                                    <div class="contArea">
+                                        <ul class="menuList">
+                                            <li class="sort1"><strong><a href="/company/ceo.jsp">CEO 메시지</a></strong></li>
+                                            <li class="sort2"><strong><a href="/company/summary.jsp">회사개요</a></strong></li>
+                                            <li class="sort3"><strong><a href="/company/award.jsp">수상내역</a></strong></li>
+                                            <li class="sort4"><strong><a href="/company/history.jsp">연혁</a></strong></li>
+                                            <li class="sort5"><strong><a href="/company/factory.jsp">사업장 소개</a></strong></li>
+                                            <li class="sort6"><strong><a href="/company/store.jsp">전국매장찾기</a></strong></li>
+                                            <li>
+                                                <strong><a href="/company/business/beautiful.jsp">사업분야</a></strong>
+                                                <ul>
+                                                    <li><a href="/company/business/beautiful.jsp">Beautiful</a></li>
+                                                    <li><a href="/company/business/healthy.jsp">Healthy</a></li>
+                                                    <li><a href="/company/business/refreshing.jsp">Refreshing</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong><a href="/company/rnd/rnd1.jsp">연구개발</a></strong>
+                                                <ul>
+                                                    <li><a href="/company/rnd/rnd1.jsp">Beautiful R&amp;D</a></li>
+                                                    <li><a href="/company/rnd/rnd2.jsp">Healthy R&amp;D</a></li>
+                                                    <li><a href="/company/rnd/rnd3.jsp">Inner Beauty R&amp;D</a></li>
+                                                    <li><a href="/company/rnd/rnd4.jsp">Scent Berry Perfume </a></li>
+                                                    <li><a href="/company/rnd/rnd5.jsp">Package R&amp;D</a></li>
+                                                    <li><a href="/company/rnd/rnd6.jsp">Design R&amp;D</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong><a href="/company/global.jsp">글로벌네트워크</a></strong>
+                                                <ul>
+                                                    <li><a href="/company/global.jsp?global=01">미국</a></li>
+                                                    <li><a href="/company/global.jsp?global=02">중국</a></li>
+                                                    <li><a href="/company/global.jsp?global=03">베트남</a></li>
+                                                    <li><a href="/company/global.jsp?global=04">일본</a></li>
+                                                    <li><a href="/company/global.jsp?global=05">싱가포르</a></li>
+                                                    <li><a href="/company/global.jsp?global=06">캐나다</a></li>
+                                                    <li><a href="/company/global.jsp?global=07">태국</a></li>
+                                                    <li><a href="/company/global.jsp?global=08">말레이시아</a></li>
+                                                    <li><a href="/company/global.jsp?global=09">영국</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong><a href="/company/ci.jsp">CI/BI</a></strong>
+                                                <ul>
+                                                    <li><a href="/company/ci.jsp">CI</a></li>
+                                                    <li><a href="/company/bi.jsp">BI</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul><!-- gnb -->
+                </div><!--nav-wrapper-desktop-->
+                <!-- 피씨 메뉴 끝 -->
+                <!-- 모바일 메뉴 시작 -->
+                <div class="nav-wrapper-mobile">
+                    <button class="menu-button-mobile" aria-controls="user-nav-mobile" aria-expanded="false" aria-label="{{t 'toggle_navigation'}}">
+                        {{#if signed_in}}
+                        {{user_avatar class="user-avatar"}}
+                        {{/if}}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-menu">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" d="M1.5 3.5h13m-13 4h13m-13 4h13" />
+                        </svg>
+                    </button>
+                    <nav class="menu-list-mobile" id="user-nav-mobile" aria-expanded="false">
+                        <ul class="menu-list-mobile-items">
+                            {{#if signed_in}}
+                            <li class="user-avatar-item item">
+                                {{#my_profile role="menuitem" class="my-profile"}}
+                                {{user_avatar class="menu-profile-avatar"}}
+                                <div class="menu-profile-name">
+                                    <div>{{user_name}}</div>
+                                    <div class="my-profile-tooltip">{{t 'profile'}}</div>
+                                </div>
+                                {{/my_profile}}
+                            </li>
+                            <li class="item">{{link "requests" role="menuitem"}}</li>
+                            <li class="item">{{#link "contributions" role="menuitem"}}{{t "activities"}}{{/link}}</li>
+                            <li class="item">{{contact_details role="menuitem"}}</li>
+                            <li class="item">{{change_password role="menuitem" class='change-password'}}</li>
+                            <li class="nav-divider"></li>
+                            {{else}}
+                            <li class="item">
+                                {{#link "sign_in" role="menuitem"}}
+                                {{t 'sign_in'}}
+                                {{/link}}
+                            </li>
+                            <li class="nav-divider"></li>
+                            {{/if}}
+                            <li class="item">{{link 'community' role="menuitem"}}</li>
+                            <li class="item">{{link 'new_request' role="menuitem" class='submit-a-request'}}</li>
+                            <li class="nav-divider"></li>
+                            {{#if signed_in}}
+                            <li class="item">
+                                {{link "sign_out" role="menuitem"}}
+                            </li>
+                            {{/if}}
+                        </ul>
+                    </nav>
+                    <!--//menu-list-mobile-->
+                </div><!--//nav-wrapper-mobile-->
+                <!-- 모바일 메뉴 끝 -->
+            </div>
+        </div><!--//gnbArea-->
+        <!-- 지엔비 끝 -->
+</header>

@@ -1,6 +1,7 @@
 // 디폴트 CSS
 html, body	{
      margin:0;padding:0; width:100%; height:100%; min-width: 1200px;
+     font-family: LGSmHaR, nGothic, "占쏙옙占쏙옙", dotum, gulim !important;
      @media screen and (max-width:767px) {
         min-width: auto;
         *{box-sizing: border-box;}
@@ -53,16 +54,16 @@ legend, caption	 { width:0 !important; height:0 !important; padding:0 !important
     a:active, #skipMenu a:focus { top:0; }
 }
 
-#wrapper	{
-    width:100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
+// #wrapper	{
+//     width:100%;
+//     min-height: 100%;
+//     display: flex;
+//     flex-direction: column;
+// }
 // #wrapper *{font-family:LG Smart, nGothic, "ï¿½ï¿½ï¿½ï¿½", dotum, gulim!important;}
 
 #header	{
-    position:fixed; z-index:50; width:100%; height:102px; min-width: 1200px;
+    position:fixed; z-index:50; width:100%; height:102px; min-width: 1200px; top: 0;
     @media screen and (max-width:767px) {
         min-width: auto;
     }
@@ -149,15 +150,15 @@ legend, caption	 { width:0 !important; height:0 !important; padding:0 !important
 }
 
 .subMenuArea {
-    display:none; position:absolute; width:100%; top:102px; left:0px; border-bottom:1px solid #dcdcdc; background:url("../images/common/bg_subMenu.png") repeat 0 0;
+    display:none; position:absolute; width:100%; top:102px; left:0px; border-bottom:1px solid #dcdcdc; background: #fff;
     >div.body {position:relative; width:1160px; margin:0 auto; padding:40px 20px 110px; *zoom:1; min-height:190px; display: flex;}
     >div.body:after {content:""; display:block; clear:both;}
     .titArea {position:relative; flex: 0 0 246px;}
     .titArea > strong.tit {color:#c70752; font-size:30px; line-height:32px; height:42px; font-family:LG Smart; font-weight:bold; letter-spacing:-1px;}
     .titArea > p.txt {font-size:14px; color:#5a5a5a; padding-top:8px; line-height:18px; font-family:LG Smart;}
     .banner {position:absolute; left:20px; bottom:40px;}
-    .contArea {float:left; width:914px; position:relative; *zoom:1;}
-    .contArea:after {content:""; dipslay:block; clear:both;}
+    .contArea {float:left; width:914px; position:relative;}
+    .contArea:after {content:""; display:block; clear:both;}
     .bannerArea {position:absolute; right:20px; bottom:10px;}
     .bannerArea img {vertical-align:bottom;}
     .slideArea {
@@ -668,6 +669,24 @@ legend, caption	 { width:0 !important; height:0 !important; padding:0 !important
 }
 
 
-@media screen and (max-width:767px) {
+main{
+    min-height: 100%;
+    padding-bottom: 100px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    box-sizing: border-box; 
 
+}
+
+*{
+    font-family: LGSmHaR, nGothic, "占쏙옙占쏙옙", dotum, gulim !important
+}
+
+[role="main"]{
+    .contArea{
+        padding:48px 41px;
+        box-sizing: border-box;
+        border:1px solid #e8e8e8;
+    }
 }

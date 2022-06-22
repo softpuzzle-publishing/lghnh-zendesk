@@ -13,8 +13,8 @@
         <!-- 컨텐트 -->
         <div id="container">
             <!-- <section class="section hero"></section> -->
-            <main id="content" role="main">
-                <div class="container">
+            <div id="content" role="main">
+                <div class="content-container">
                     @@include('@@webRoot/_include/_searchArea.html')
                     <div class="contents-area">
                         @@include('@@webRoot/_include/_aside.html')
@@ -235,20 +235,13 @@
                                             pagination: {
                                                 el: '.swiper-pagination',
                                                 type: 'bullets',
-                                                clickable : true,
+                                                clickable: true,
                                             },
-                                            // loop: true,
-                                            // autoplay: {
-                                            //     delay: 500,
-                                            //     disableOnInteraction: false,
-                                            // },
                                         });
                                     } else if (ww >= 768 && productSwiper != undefined) {
                                         productSwiper.destroy();
                                         productSwiper = undefined;
                                     }
-
-
                                 }
 
                                 function sortSwiper() {
@@ -540,13 +533,17 @@
                                 @@include('@@webRoot/_include/_pagination.html')
                             </div>
                             <script>
-                                $(".tabMenu li").on('click', function(){
+                                $(".tabMenu li").on('click', function () {
                                     $(this).addClass("on");
                                     var tabMenuIndex = $(this).index();
                                     $(".tabMenu li").not(this).removeClass("on");
                                     console.log(tabMenuIndex);
-                                    $(".faq-list .listCont").css({"display":"none"});
-                                    $(".faq-list .listCont").eq(tabMenuIndex).css({"display":"block"});
+                                    $(".faq-list .listCont").css({
+                                        "display": "none"
+                                    });
+                                    $(".faq-list .listCont").eq(tabMenuIndex).css({
+                                        "display": "block"
+                                    });
                                 });
                                 $(".tabMenu li:first-child").trigger("click");
                             </script>
@@ -560,7 +557,7 @@
 
                 <!-- 퀵메뉴 -->
                 @@include('@@webRoot/_include/_quickWrap.html')
-            </main>
+            </div>
         </div>
         <!-- 컨텐트 끝 -->
 
