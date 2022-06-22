@@ -92,6 +92,7 @@ input {
   overflow: visible;
 }
 
+
 button,
 select {
   text-transform: none;
@@ -195,10 +196,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-@media (min-width: 1024px) {
-  body > main {
-    min-height: 65vh;
-  }
+main { 
+  margin-top:102px;
+  min-height:65vh;
+}
+@media screen and (max-width: 767px) {
+    main {
+        margin-top: 55px
+    }
 }
 
 h1,
@@ -280,6 +285,7 @@ select {
 
 select:focus {
     border: 1px solid rgba(206, 40, 91, 1)!important;
+  	z-index:2;
 }
 
 select::-ms-expand {
@@ -317,6 +323,15 @@ textarea:focus {
   margin-bottom: 20px;
 }
 
+.container-divider{
+  padding-bottom:40px;
+}
+@media (max-width:767px){
+  .container-divider{
+    padding-bottom:20px;
+  }
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -324,16 +339,24 @@ ul {
 }
 
 .error-page {
-  max-width: 1160px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 10px;
 }
 
-@media (min-width: 1160px) {
-  .error-page {
-    padding: 0;
-    width: 90%;
-  }
+.error-page h2{
+	padding-bottom:1rem;
+}
+
+.error-page a{
+  margin-top:1rem;
+  display:block;
+  width:auto;
+  color:#c70752 !important;
+  padding-right:1rem;
+}
+.error-page a::after{
+	content:'>' ;
 }
 
 .visibility-hidden {
@@ -566,6 +589,7 @@ ul {
 .form-field input[type="text"] {
   border: 1px solid #ddd;
   border-radius: 4px;
+    -webkit-appearance: none;
 }
 
 .form-field input[type="text"]:focus {
@@ -646,20 +670,23 @@ ul {
 
 /***** Header *****/
 .header {
-  max-width: 1160px;
   margin: 0 auto;
-  padding: 0 5%;
-  position: relative;
   align-items: center;
   display: flex;
   height: 71px;
   justify-content: space-between;
+  flex-flow:column;
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  height: 55px;
+  min-width: auto
 }
 
-@media (min-width: 1160px) {
+@media (min-width: 768px) {
   .header {
     padding: 0;
-    width: 90%;
+      height: 102px;
   }
 }
 
@@ -728,7 +755,7 @@ ul {
   display: inline-block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .nav-wrapper-desktop {
     display: none;
   }
@@ -736,28 +763,10 @@ ul {
 
 @media (min-width: 768px) {
   .nav-wrapper-desktop {
-    display: none;
-  }
-}
-
-@media (min-width: 1024px) {
-  .nav-wrapper-desktop {
-    display: inline-block;
-  }
-}
-
-.nav-wrapper-desktop a {
-  border: 0;
-  color: $link_color;
-  display: none;
-  font-size: 14px;
-  padding: 0 20px 0 0;
-  width: auto;
-}
-
-@media (min-width: 768px) {
-  .nav-wrapper-desktop a {
-    display: inline-block;
+    display: flex;
+    align-items:center;
+    height:70px;
+    justify-content: end;
   }
 }
 
@@ -770,42 +779,43 @@ ul {
   color: $link_color;
   text-decoration: underline;
 }
-
-@media (min-width: 1024px) {
+.nav-wrapper-mobile{
+  margin-right:-10px;
+}
+@media (min-width: 768px) {
   .nav-wrapper-mobile {
     display: none;
   }
 }
 
 .nav-wrapper-mobile .menu-button-mobile {
-  background: none;
+	background: none;
   border: 0;
   width: auto;
-  min-width: 71px;
+  min-width: auto;
   cursor: pointer;
+  padding: 16px;
+  box-sizing: content-box;
 }
 
 .nav-wrapper-mobile .menu-button-mobile .icon-menu {
-  padding: 7px;
   vertical-align: middle;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  box-sizing: content-box;
+  background-size: contain;
 }
 
-.nav-wrapper-mobile .menu-button-mobile[aria-expanded="true"] .icon-menu {
-  background: #f3f3f3;
-}
 
 .nav-wrapper-mobile .menu-list-mobile {
   position: absolute;
-  background-color: #fff;
+  background-color: #efeeee;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.15);
   border-top: solid 1px #ddd;
   border-bottom: solid 1px #ddd;
   right: 0;
   left: 0;
-  top: 71px;
+  top: 55px;
   z-index: 2;
 }
 
@@ -815,6 +825,13 @@ ul {
 
 .nav-wrapper-mobile .menu-list-mobile[aria-expanded="true"] {
   display: block;
+}
+
+.menu-button-mobile[aria-expanded="false"] .icon-menu{
+	background-image:url($assets-icon-menu-bars-svg);
+}
+.menu-button-mobile[aria-expanded="true"] .icon-menu{
+  background-image:url($assets-icon-close-white-svg);
 }
 
 .nav-wrapper-mobile .menu-list-mobile-items .item {
@@ -1244,7 +1261,7 @@ ul {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 10px 0;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -1271,12 +1288,13 @@ ul {
   margin-bottom: 10px;
 }
 
+
 .page-header-description {
   font-style: initial;
   word-break: break-word;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .page-header-description {
     flex-basis: 100%;
   }
@@ -1968,12 +1986,33 @@ ul {
   border-top: 1px solid #ddd;
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
+  padding: 30px 0 10px 0;
+  margin-top: 60px;
+  gap:20px;
 }
 
 @media (min-width: 768px) {
   .article-relatives {
     flex-direction: row;
+    gap:0;
+  }
+}
+.recent-articles ul>li, .related-articles ul>li{
+  margin-bottom:0;
+}
+
+
+.recent-articles ul>li>a, .related-articles ul>li>a{
+ 	font-size: 13px;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .recent-articles ul>li>a, .related-articles ul>li>a{
+		display: block;
+    color: #5b5b5b;
+    font-size: 15px;
+    line-height: 2.27;
+    letter-spacing: -0.15px;
   }
 }
 
@@ -2064,6 +2103,17 @@ ul {
 .related-articles li {
   margin-bottom: 15px;
 }
+.recent-articles-title, .related-articles-title{
+	  font-size: 14px;
+  	margin-bottom:10px!important;
+}
+
+@media (min-width: 768px) {
+	.recent-articles-title, .related-articles-title{
+	  margin-bottom:20px!important;
+    font-size:16px;
+	}
+}
 
 /***** Attachments *****/
 /* Styles attachments inside posts, articles and comments */
@@ -2135,12 +2185,17 @@ ul {
   padding: 20px 0;
 }
 
-.comment-heading, .recent-articles-title,
-.related-articles-title {
-  margin-bottom: 5px;
-  margin-top: 0;
-  font-size: 18px;
+.comment-heading, .recent-articles-title, .related-articles-title {
+  font-size: 14px;
   font-weight: 600;
+}
+@media (min-width:768px){
+  .comment-heading, .recent-articles-title, .related-articles-title {
+      margin-bottom: 5px;
+      margin-top: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
 }
 
 .comment-overview {
@@ -5068,7 +5123,8 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    min-width: 1200px
+    min-width: 1200px;
+    font-family : 'LGSmHaR', sans-serif;
 }
 
 @media screen and (max-width: 767px) {
@@ -5266,8 +5322,8 @@ caption {
     padding: 0 !important
 }
 
-#wrapper * {
-    font-family: LGSmHaR, nGothic, "占쏙옙占쏙옙", dotum, gulim !important
+* {
+    font-family: 'LGSmHaR', nGothic, "占쏙옙占쏙옙", dotum, gulim , sans-serif;
 }
 
 #skipMenu {
@@ -5303,25 +5359,15 @@ caption {
     flex-direction: column
 }
 
-#header {
-    position: fixed;
-    z-index: 50;
-    width: 100%;
-    height: 102px;
-    min-width: 1200px;
-}
-@media screen and (max-width: 767px) {
-    #header {
-        min-width: auto
-    }
-}
+
 
 #util {
     position: relative;
     height: 32px;
     padding: 0 20px;
     margin: 0 auto;
-    background: #b2b2b2
+    background: #b2b2b2;
+  	width:100%;
 }
 
 #util .topBanner {
@@ -5445,7 +5491,10 @@ caption {
 #gnbArea {
     margin: 0 auto;
     background: #666;
-    height: 70px
+    height: 70px;
+  	width:100%;
+}
+#gnbArea .content-container{
 }
 
 #gnbArea .logo {
@@ -5462,15 +5511,20 @@ caption {
 
     #gnbArea .logo {
         float: none;
-        padding: 12px 0 0 0;
-        text-align: center;
+        padding: 0;
         width: auto;
         height: auto
     }
+  	#gnbArea .content-container{
+    	display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:100%;
+      min-width:auto;
+  	}
 }
 
 #gnb {
-    float: right;
     height: 70px
 }
 
@@ -5511,7 +5565,8 @@ caption {
     line-height: 70px;
     color: #fff;
     font-family: "LG Smart";
-    text-align: center
+    text-align: center;
+  	text-decoration:none;
 }
 
 #gnb>li>a span {
@@ -5520,7 +5575,8 @@ caption {
     height: 70px;
     line-height: 70px;
     text-align: center;
-    cursor: pointer
+    cursor: pointer;
+  	font-size:16px;
 }
 
 #gnb>li>a span.kor {
@@ -5619,9 +5675,9 @@ caption {
 
 .subMenuArea>div.body {
     position: relative;
-    width: 1160px;
+    width: 1180px;
     margin: 0 auto;
-    padding: 40px 20px 110px;
+    padding: 40px 10px 110px;
     min-height: 190px;
     display: flex
 }
@@ -5846,7 +5902,7 @@ caption {
 }
 
 .gnb3 .subMenuArea>div.body {
-    padding: 40px 20px 40px
+    padding: 40px 10px 40px
 }
 
 .gnb4 .subTypeB ul.menuList>li {
@@ -6309,19 +6365,12 @@ caption {
     flex-grow: 1;
     height: auto;
     width: 100%;
-    margin-top: 102px
 }
 
 #container::after {
     content: "";
     display: block;
     clear: both
-}
-
-@media screen and (max-width: 767px) {
-    #container {
-        margin-top: 55px
-    }
 }
 
 #contArea {
@@ -6654,11 +6703,13 @@ caption {
 
 #footer .company address {
     height: 22px;
-    font-style: normal
+    font-style: normal;
+  	margin-bottom:0;
 }
 
 #footer .company dl {
     height: 22px;
+  	margin-bottom:0;
 }
 
 #footer .company dl:after {
@@ -6690,7 +6741,7 @@ caption {
 
 #footer .copy {
     font-size: 12px;
-    line-height: 13px
+    line-height: 33px;
 }
 
 #footer .goTop {
@@ -6751,7 +6802,9 @@ caption {
     #footer {
         padding: 1.5rem 1rem
     }
-
+    #footer .customercenter > div{
+      margin-top:1rem;
+    }
     #footer .logo {
         float: none;
         padding: 0;
@@ -7182,17 +7235,24 @@ caption {
     top: 12px
 }
 
-#cusSidebar .dep1>li .accordion-item {
+.accordion-item {
     display: none;
-  	border:0;
+  	border:0!important;
 }
 
-#cusSidebar .dep1>li .accordion-item li a {
+.accordion-item li a {
     font-size: 14px;
     letter-spacing: -0.14px;
     padding: 13px 0 11px 35px;
     display: block;
-    font-weight: bold
+  	font-weight: 600
+}
+.menu-list-mobile-items .accordion-item{
+   background:#f7f7f7;
+}
+
+.menu-list-mobile-items .accordion-item a{
+  font-weight:400;
 }
 
 #cusSidebar+.contArea {
@@ -7208,28 +7268,43 @@ caption {
 @CHARSET "euc-kr";
 
 @font-face {
-    font-family: LGSmHaR;
-    src: url("LGSmHanR.eot");
-    src: local("※"), url("../fonts/LGSmHanR.woff") format("woff"), url("../fonts/LGSmHanR.ttf") format("truetype");
-    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+AC00-D7A3
+    font-family: 'LGSmHaR';
+  	font-weight:normal;
+  	font-weight:400;
+    src: local('LGSmHaR'), url('$assets-lgsmhanr-woff') format("woff");
 }
 
 @font-face {
-    font-family: LGSmHaR;
+    font-family: 'LGSmHaR';
     font-weight: bold;
     font-weight: 600;
-    src: url("LGSmHanB.eot");
-    src: local("※"), url("../fonts/LGSmHanB.woff") format("woff"), url("../fonts/LGSmHanB.ttf") format("truetype");
-    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+AC00-D7A3
+    src: local('LGSmHaR'), url('$assets-lgsmhanb-woff') format("woff");
 }
 
 @font-face {
-    font-family: LGSmHaR;
+    font-family: 'LGSmHaR';
     font-weight: 500;
-    src: url("LGSmHaSB.eot");
-    src: local("※"), url("../fonts/LGSmHaSB.woff") format("woff"), url("../fonts/LGSmHaSB.ttf") format("truetype");
-    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+AC00-D7A3
+    src: local('LGSmHaR'), url('$assets-lgsmhanr-woff') format("woff");
 }
+
+/* @font-face {
+    font-family: 'LGSmHaR';
+    src: local('LGSmHaR'), url('//lghnhhelp.zendesk.com/hc/ko/LGSmHanR-woff'));
+}
+
+@font-face {
+    font-family: 'LGSmHaR';
+    font-weight: bold;
+    font-weight: 600;
+    src: local('LGSmHaR'), url('//lghnhhelp.zendesk.com/hc/ko/LGSmHanB.woff')) format("woff");
+}
+
+@font-face {
+    font-family: 'LGSmHaR';
+    font-weight: 500;
+    src: local('LGSmHaR'), url('//lghnhhelp.zendesk.com/hc/ko/LGSmHanB.woff') format("woff");
+} */
+
 
 @font-face {
     font-family: nGothic;
@@ -7261,7 +7336,7 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: LGSmHaR, nGothic, "µ¸¿ò", dotum, gulim;
+    font-family: 'LGSmHaR', nGothic, "µ¸¿ò", dotum, gulim, sans-serif;
     font-size: 14px;
     font-weight: normal;
     color: #666
@@ -8016,7 +8091,7 @@ em,
     display: inline-block;
     height: 25px;
     padding: 0 8px;
-    line-height: 22px
+    line-height: 25px
 }
 
 .paging li span {
@@ -9281,7 +9356,8 @@ p.unit span {
 
 @media screen and (max-width: 767px) {
     .hero {
-        width: 100%
+        width: 100%;
+        margin-bottom:0;
     }
 }
 
@@ -9289,6 +9365,11 @@ p.unit span {
     content: var(--bs-breadcrumb-divider, url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='5px' height='8px' viewBox='0 0 6 10' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='icon-arrow-next-gray-5' fill='%23939393' fill-rule='nonzero'%3E%3Cpolygon id='Path' points='0 0.577 4.757 4.999 0 9.423 0.62 10 6 4.999 0.62 0'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E"));
     padding: 0 .6rem;
     margin: 0
+}
+@media screen and (max-width: 767px) {
+  .breadcrumbs li+li::before {
+    padding: 0 0.4rem 0 0.2rem;
+  }
 }
 
 .breadcrumbs li:last-child {
@@ -9732,9 +9813,12 @@ main .contArea {
     appearance: none;
     flex: 0 0 160px;
     border-top-left-radius: 30px;
+    border-top-right-radius: 0;
     border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 0;
     box-sizing: border-box;
     border: 1px solid #e8e8e8
+    
 }
 
 .search-group .input-group {
@@ -9755,7 +9839,7 @@ main .contArea {
     align-items: center;
     justify-content: center;
     top: 0;
-    right: 12px
+    right: 5px
 }
 
 .search-group .search-input {
@@ -9765,13 +9849,18 @@ main .contArea {
     border: 1px solid #e8e8e8;
     border-top-right-radius: 30px!important;
     border-bottom-right-radius: 30px!important;
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
     box-sizing: border-box;
-    padding: .25rem 50px .25rem 1.25rem
+    padding: .25rem 50px .25rem 1.25rem;
+  	box-shadow:none!important;
+  	 -webkit-appearance: none;
 }
 
 @media screen and (max-width: 767px) {
     .search-group {
-        width: 100%
+        width: 100%;
+        padding:0;
     }
     .search-group .search-input::placeholder
     {
@@ -9806,7 +9895,6 @@ main .contArea {
 .page-header .page-header-description {
     color: #5b5b5b;
     margin-top: 14px;
-    font-weight: bold
 }
 
 .page-header.notice {
@@ -9816,13 +9904,21 @@ main .contArea {
 }
 
 @media screen and (max-width: 767px) {
+  .page-header h1 {
+        font-size: 16px;
+    }
     .page-header.notice {
         flex-direction: column;
         align-items: baseline
     }
+    .page-header .page-header-description{
+      font-size:12px;
+      margin-top:8px;
+    }
 
     .page-header.notice span {
-        margin-top: 10px
+        margin-top: 10px;
+      	font-size:12px;
     }
 }
 
@@ -9853,7 +9949,7 @@ main .contArea {
     color: #5b5b5b;
     font-weight: bold;
     letter-spacing: -0.14px;
-    font-size: 14px;
+    font-size: 15px;
     box-sizing: border-box;
     margin: 4px;
     display: inline-block;
@@ -9876,7 +9972,7 @@ main .contArea {
 }
 
 .swiper-pagination-bullet-active {
-    background: #c70752
+    background: #c70752!important;
 }
 
 .swiper-pagination-bullet {
@@ -9917,7 +10013,7 @@ a.btn.btn-primary,
 button.btn.btn-primary,
 input.btn.btn-primary {
     background: #c70752;
-    color: #fff !important
+    color: #fff !important;
 }
 
 a.btn+.btn,
@@ -9996,7 +10092,7 @@ input.btn+.btn {
     margin-top: 25px;
     line-height: 1.47;
     letter-spacing: -0.15px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
     color: #5b5b5b
 }
@@ -10086,7 +10182,8 @@ input.btn+.btn {
     background: #f6f6f6;
     border: 2px solid #39352c;
     border-right-width: 1px;
-    border-left-width: 1px
+    border-left-width: 1px;
+  	text-align:center;
 }
 
 .response-complaints table td {
@@ -10231,8 +10328,10 @@ input.btn+.btn {
     }
 
     .faq-product .swiper-container {
-        margin-top: 20px;
-        padding-bottom: 40px
+       margin-top: 20px;
+      padding-bottom: 40px;
+      overflow: hidden;
+      position: relative;
     }
 
     .faq-product .faq-product-list {
@@ -10245,7 +10344,7 @@ input.btn+.btn {
     }
 
     .faq-product .faq-product-list li {
-        min-height: 270px;
+        min-height: 280px;
         position: relative;
         background-color: #fafafa;
         height: 100%
@@ -10256,7 +10355,7 @@ input.btn+.btn {
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
-        padding: 22px 10px 17px 17px;
+        padding: 20px 0 0 0;
         box-sizing: border-box
     }
 
@@ -10267,7 +10366,8 @@ input.btn+.btn {
     }
 
     .faq-product .faq-product-list li .icon-wrap b {
-        margin-top: 10px
+        margin-top: 10px;
+      	font-size:14px;
     }
 
     .faq-product .faq-product-list li .text-wrap {
@@ -10301,7 +10401,7 @@ input.btn+.btn {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -4px;
-    max-width: 660px
+    max-width: 680px
 }
 
 .faq-sort .sort-btn-area .swiper-slide {
@@ -10311,6 +10411,10 @@ input.btn+.btn {
 @media screen and (max-width: 767px) {
     .faq-sort {
         margin-top: 40px
+    }
+  
+    .faq-sort .swiper-container{
+        overflow:hidden;
     }
 
     .faq-sort .sort-btn-area {
@@ -10394,13 +10498,13 @@ input.btn+.btn {
     }
 
     .faq-video .faq-video-list .title {
-        margin-top: 0;
         font-size: 14px
     }
 
     .faq-video .faq-video-list .desc {
         margin-top: 8px;
-        margin-bottom: 10px
+        margin-bottom: 10px;
+      	font-size:12px;
     }
 }
 
@@ -10452,7 +10556,8 @@ input.btn+.btn {
 
     .faq-list .tabMenu li a {
         font-size: 16px;
-        text-align: center
+        text-align: center;
+      	padding: 12px;
     }
 
     .faq-list .tabMenu li.on a {
@@ -10497,7 +10602,7 @@ input.btn+.btn {
 }
 
 .faq-list .list li .fl {
-    width: 574px;
+    width: 550px;
     font-size: 15px
 }
 
@@ -10718,9 +10823,14 @@ input.btn+.btn {
     color: #2d2d2d
 }
 
+.faq-detail .desc img, .qna-contents .contents img{
+		margin-top:1rem;
+}
+
 .faq-detail .faq-quistion-wrap {
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
+      margin-top: 4rem;
 }
 
 .faq-detail .faq-quistion-wrap span {
@@ -10751,16 +10861,16 @@ input.btn+.btn {
         font-size: 13px;
         line-height: 1.5;
         min-height: 170px;
-        margin-bottom: 20px
+        margin-bottom: 60px
     }
-
-    .faq-detail .faq-quistion-wrap span {
-        font-size: 12px
-    }
-
-    .faq-detail .faq-quistion-wrap a {
-        font-size: 12px
-    }
+  .faq-detail .desc img, .qna-contents .contents img{
+		height: 100%;
+    width: 100%;
+    margin-top:1rem;
+  }
+  .faq-detail .faq-quistion-wrap{
+    margin-top:1rem;
+  }
 }
 
 .faq-solution {
@@ -10811,7 +10921,8 @@ input.btn+.btn {
 .faq-solution .relatedQ {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 8px
+    gap: 8px;
+    margin-top: 2rem
 }
 
 .faq-solution .relatedQ li {
@@ -10829,7 +10940,10 @@ input.btn+.btn {
     align-items: center;
     justify-content: center;
     height: 100%;
-    word-break: keep-all
+    word-break: keep-all;
+  	display: -webkit-flex;
+  	-webkit-justify-content: center; 
+  	-webkit-align-items: center;
 }
 
 .faq-solution .faq-evaluation-btn-wrap {
@@ -10869,7 +10983,8 @@ input.btn+.btn {
     }
 
     .faq-solution .relatedQ {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+      	margin-top:1rem;
     }
 
     .faq-solution .relatedQ li a {
@@ -10914,7 +11029,8 @@ input.btn+.btn {
     top: 0;
     left: 0;
     height: 100%;
-    width: 100%
+  	width:100%;
+  	margin-top:1rem;
 }
 
 .my-qna-list-wrap {
@@ -10981,7 +11097,8 @@ input.btn+.btn {
     text-overflow: ellipsis;
     white-space: nowrap;
     display: block;
-    max-width: 360px
+    max-width: 360px;
+  	min-width: 300px;
 }
 
 .custom-table thead tr {
@@ -11019,7 +11136,9 @@ input.btn+.btn {
     .custom-table a {
         max-width: none;
         white-space: initial;
-        overflow: auto
+        overflow: auto;
+       	word-break: break-all;
+      	min-width:auto;
     }
 }
 
@@ -11144,7 +11263,7 @@ input.btn+.btn {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 86px
+    min-height: 86px
 }
 
 .qna-prt>div>ul li {
@@ -11182,7 +11301,7 @@ input.btn+.btn {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: auto
+        min-height: auto
     }
 
     .qna-prt>div>ul li {
@@ -11585,8 +11704,8 @@ input.btn+.btn {
 
     .myCareList li p.text {
         padding-left: 0;
-        width: 100%;
-        text-align: center
+        width: 80%;
+        text-align: center;
     }
 
     .myCareList li p.btn {
@@ -11610,14 +11729,13 @@ input.btn+.btn {
     font-size: 16px;
     font-weight: bold;
     color: #2d2d2d;
-    margin-bottom: 14px
 }
 
 .head-text h1 {
     font-size: 42px;
     font-weight: bold;
     color: #2d2d2d;
-    margin-bottom: 42px
+     margin-top:16px;
 }
 
 @media screen and (max-width: 767px) {
@@ -11628,7 +11746,6 @@ input.btn+.btn {
 
     .head-text h1 {
         font-size: 20px;
-        margin-bottom: 20px
     }
 }
 
@@ -11757,7 +11874,7 @@ input.btn+.btn {
 
 .main-client-wrap ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 12px;
     margin-top: 30px
 }
@@ -11810,3 +11927,6 @@ ol, ul, h1, h2, h3, h4, h5, h6, p {
     margin-bottom: 0!important;
     margin-right: 0;
 }
+
+.btn{border-radius:0!important;}
+.card{border-radius:0!important;}
